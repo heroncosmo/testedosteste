@@ -1,0 +1,1379 @@
+[
+  {
+    "table_schema": "public",
+    "table_name": "campaign_leads",
+    "column_name": "id",
+    "ordinal_position": 1,
+    "data_type": "uuid",
+    "is_nullable": "NO",
+    "column_default": "uuid_generate_v4()"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "campaign_leads",
+    "column_name": "campaign_id",
+    "ordinal_position": 2,
+    "data_type": "uuid",
+    "is_nullable": "NO",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "campaign_leads",
+    "column_name": "lead_id",
+    "ordinal_position": 3,
+    "data_type": "uuid",
+    "is_nullable": "NO",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "campaign_leads",
+    "column_name": "message_template_id",
+    "ordinal_position": 4,
+    "data_type": "uuid",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "campaign_leads",
+    "column_name": "whatsapp_connection_id",
+    "ordinal_position": 5,
+    "data_type": "uuid",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "campaign_leads",
+    "column_name": "status",
+    "ordinal_position": 6,
+    "data_type": "text",
+    "is_nullable": "YES",
+    "column_default": "'pending'::text"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "campaign_leads",
+    "column_name": "sent_message",
+    "ordinal_position": 7,
+    "data_type": "text",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "campaign_leads",
+    "column_name": "sent_at",
+    "ordinal_position": 8,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "campaign_leads",
+    "column_name": "error_message",
+    "ordinal_position": 9,
+    "data_type": "text",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "campaign_leads",
+    "column_name": "has_response",
+    "ordinal_position": 10,
+    "data_type": "boolean",
+    "is_nullable": "YES",
+    "column_default": "false"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "campaign_leads",
+    "column_name": "response_at",
+    "ordinal_position": 11,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "campaign_leads",
+    "column_name": "user_notes",
+    "ordinal_position": 12,
+    "data_type": "text",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "campaign_leads",
+    "column_name": "created_at",
+    "ordinal_position": 13,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO",
+    "column_default": "timezone('utc'::text, now())"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "campaign_leads",
+    "column_name": "updated_at",
+    "ordinal_position": 14,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO",
+    "column_default": "timezone('utc'::text, now())"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "campaigns",
+    "column_name": "id",
+    "ordinal_position": 1,
+    "data_type": "uuid",
+    "is_nullable": "NO",
+    "column_default": "uuid_generate_v4()"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "campaigns",
+    "column_name": "user_id",
+    "ordinal_position": 2,
+    "data_type": "uuid",
+    "is_nullable": "NO",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "campaigns",
+    "column_name": "name",
+    "ordinal_position": 3,
+    "data_type": "text",
+    "is_nullable": "NO",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "campaigns",
+    "column_name": "description",
+    "ordinal_position": 4,
+    "data_type": "text",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "campaigns",
+    "column_name": "status",
+    "ordinal_position": 5,
+    "data_type": "text",
+    "is_nullable": "YES",
+    "column_default": "'draft'::text"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "campaigns",
+    "column_name": "total_leads",
+    "ordinal_position": 6,
+    "data_type": "integer",
+    "is_nullable": "YES",
+    "column_default": "0"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "campaigns",
+    "column_name": "sent_count",
+    "ordinal_position": 7,
+    "data_type": "integer",
+    "is_nullable": "YES",
+    "column_default": "0"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "campaigns",
+    "column_name": "success_count",
+    "ordinal_position": 8,
+    "data_type": "integer",
+    "is_nullable": "YES",
+    "column_default": "0"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "campaigns",
+    "column_name": "failed_count",
+    "ordinal_position": 9,
+    "data_type": "integer",
+    "is_nullable": "YES",
+    "column_default": "0"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "campaigns",
+    "column_name": "response_count",
+    "ordinal_position": 10,
+    "data_type": "integer",
+    "is_nullable": "YES",
+    "column_default": "0"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "campaigns",
+    "column_name": "started_at",
+    "ordinal_position": 11,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "campaigns",
+    "column_name": "completed_at",
+    "ordinal_position": 12,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "campaigns",
+    "column_name": "created_at",
+    "ordinal_position": 13,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO",
+    "column_default": "timezone('utc'::text, now())"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "campaigns",
+    "column_name": "updated_at",
+    "ordinal_position": 14,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO",
+    "column_default": "timezone('utc'::text, now())"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "empresas",
+    "column_name": "cnpj_basico",
+    "ordinal_position": 1,
+    "data_type": "character varying",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "empresas",
+    "column_name": "razao_social",
+    "ordinal_position": 2,
+    "data_type": "character varying",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "empresas",
+    "column_name": "nome_fantasia",
+    "ordinal_position": 3,
+    "data_type": "character varying",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "empresas",
+    "column_name": "tem_dados_empresa",
+    "ordinal_position": 4,
+    "data_type": "character varying",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "empresas",
+    "column_name": "tem_dados_socio",
+    "ordinal_position": 5,
+    "data_type": "character varying",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "empresas",
+    "column_name": "natureza_juridica",
+    "ordinal_position": 6,
+    "data_type": "character varying",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "empresas",
+    "column_name": "porte",
+    "ordinal_position": 7,
+    "data_type": "numeric",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "empresas",
+    "column_name": "capital_social",
+    "ordinal_position": 8,
+    "data_type": "character varying",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "empresas",
+    "column_name": "tipo_logradouro",
+    "ordinal_position": 9,
+    "data_type": "character varying",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "empresas",
+    "column_name": "logradouro",
+    "ordinal_position": 10,
+    "data_type": "character varying",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "empresas",
+    "column_name": "numero",
+    "ordinal_position": 11,
+    "data_type": "character varying",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "empresas",
+    "column_name": "complemento",
+    "ordinal_position": 12,
+    "data_type": "character varying",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "empresas",
+    "column_name": "bairro",
+    "ordinal_position": 13,
+    "data_type": "character varying",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "empresas",
+    "column_name": "cep",
+    "ordinal_position": 14,
+    "data_type": "character varying",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "empresas",
+    "column_name": "codigo_municipio",
+    "ordinal_position": 15,
+    "data_type": "integer",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "empresas",
+    "column_name": "municipio",
+    "ordinal_position": 16,
+    "data_type": "character varying",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "empresas",
+    "column_name": "uf",
+    "ordinal_position": 17,
+    "data_type": "character varying",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "empresas",
+    "column_name": "telefone_1",
+    "ordinal_position": 18,
+    "data_type": "character varying",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "empresas",
+    "column_name": "telefone_2",
+    "ordinal_position": 19,
+    "data_type": "character varying",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "empresas",
+    "column_name": "email",
+    "ordinal_position": 20,
+    "data_type": "character varying",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "empresas",
+    "column_name": "cnae_fiscal",
+    "ordinal_position": 21,
+    "data_type": "integer",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "empresas",
+    "column_name": "cnae_descricao",
+    "ordinal_position": 22,
+    "data_type": "character varying",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "empresas",
+    "column_name": "cnae_fiscal_secundario",
+    "ordinal_position": 23,
+    "data_type": "character varying",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "empresas",
+    "column_name": "data_inicio_atividade",
+    "ordinal_position": 24,
+    "data_type": "date",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "empresas",
+    "column_name": "codigo_situacao_cadastral",
+    "ordinal_position": 25,
+    "data_type": "integer",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "empresas",
+    "column_name": "situacao_cadastral",
+    "ordinal_position": 26,
+    "data_type": "character varying",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "empresas",
+    "column_name": "data_situacao_cadastral",
+    "ordinal_position": 27,
+    "data_type": "date",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "empresas",
+    "column_name": "motivo_situacao_cadastral",
+    "ordinal_position": 28,
+    "data_type": "integer",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "empresas",
+    "column_name": "identificador_matriz_filial",
+    "ordinal_position": 29,
+    "data_type": "integer",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "lead_tags",
+    "column_name": "id",
+    "ordinal_position": 1,
+    "data_type": "uuid",
+    "is_nullable": "NO",
+    "column_default": "uuid_generate_v4()"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "lead_tags",
+    "column_name": "user_id",
+    "ordinal_position": 2,
+    "data_type": "uuid",
+    "is_nullable": "NO",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "lead_tags",
+    "column_name": "lead_id",
+    "ordinal_position": 3,
+    "data_type": "uuid",
+    "is_nullable": "NO",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "lead_tags",
+    "column_name": "tag",
+    "ordinal_position": 4,
+    "data_type": "text",
+    "is_nullable": "NO",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "lead_tags",
+    "column_name": "notes",
+    "ordinal_position": 5,
+    "data_type": "text",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "lead_tags",
+    "column_name": "created_at",
+    "ordinal_position": 6,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO",
+    "column_default": "timezone('utc'::text, now())"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "lead_tags",
+    "column_name": "updated_at",
+    "ordinal_position": 7,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO",
+    "column_default": "timezone('utc'::text, now())"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "leads",
+    "column_name": "id",
+    "ordinal_position": 1,
+    "data_type": "uuid",
+    "is_nullable": "NO",
+    "column_default": "uuid_generate_v4()"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "leads",
+    "column_name": "user_id",
+    "ordinal_position": 2,
+    "data_type": "uuid",
+    "is_nullable": "NO",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "leads",
+    "column_name": "cnpj",
+    "ordinal_position": 3,
+    "data_type": "text",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "leads",
+    "column_name": "company_name",
+    "ordinal_position": 4,
+    "data_type": "text",
+    "is_nullable": "NO",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "leads",
+    "column_name": "phone",
+    "ordinal_position": 5,
+    "data_type": "text",
+    "is_nullable": "NO",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "leads",
+    "column_name": "email",
+    "ordinal_position": 6,
+    "data_type": "text",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "leads",
+    "column_name": "city",
+    "ordinal_position": 7,
+    "data_type": "text",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "leads",
+    "column_name": "state",
+    "ordinal_position": 8,
+    "data_type": "text",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "leads",
+    "column_name": "cnae_code",
+    "ordinal_position": 9,
+    "data_type": "text",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "leads",
+    "column_name": "cnae_description",
+    "ordinal_position": 10,
+    "data_type": "text",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "leads",
+    "column_name": "opening_date",
+    "ordinal_position": 11,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "leads",
+    "column_name": "capital_social",
+    "ordinal_position": 12,
+    "data_type": "numeric",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "leads",
+    "column_name": "company_status",
+    "ordinal_position": 13,
+    "data_type": "text",
+    "is_nullable": "YES",
+    "column_default": "'active'::text"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "leads",
+    "column_name": "has_whatsapp",
+    "ordinal_position": 14,
+    "data_type": "boolean",
+    "is_nullable": "YES",
+    "column_default": "false"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "leads",
+    "column_name": "status",
+    "ordinal_position": 15,
+    "data_type": "text",
+    "is_nullable": "YES",
+    "column_default": "'new'::text"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "leads",
+    "column_name": "created_at",
+    "ordinal_position": 16,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO",
+    "column_default": "timezone('utc'::text, now())"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "leads",
+    "column_name": "updated_at",
+    "ordinal_position": 17,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO",
+    "column_default": "timezone('utc'::text, now())"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "message_categories",
+    "column_name": "id",
+    "ordinal_position": 1,
+    "data_type": "uuid",
+    "is_nullable": "NO",
+    "column_default": "uuid_generate_v4()"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "message_categories",
+    "column_name": "user_id",
+    "ordinal_position": 2,
+    "data_type": "uuid",
+    "is_nullable": "NO",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "message_categories",
+    "column_name": "name",
+    "ordinal_position": 3,
+    "data_type": "text",
+    "is_nullable": "NO",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "message_categories",
+    "column_name": "description",
+    "ordinal_position": 4,
+    "data_type": "text",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "message_categories",
+    "column_name": "segment",
+    "ordinal_position": 5,
+    "data_type": "text",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "message_categories",
+    "column_name": "created_at",
+    "ordinal_position": 6,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO",
+    "column_default": "timezone('utc'::text, now())"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "message_categories",
+    "column_name": "updated_at",
+    "ordinal_position": 7,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO",
+    "column_default": "timezone('utc'::text, now())"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "message_templates",
+    "column_name": "id",
+    "ordinal_position": 1,
+    "data_type": "uuid",
+    "is_nullable": "NO",
+    "column_default": "uuid_generate_v4()"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "message_templates",
+    "column_name": "category_id",
+    "ordinal_position": 2,
+    "data_type": "uuid",
+    "is_nullable": "NO",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "message_templates",
+    "column_name": "content",
+    "ordinal_position": 3,
+    "data_type": "text",
+    "is_nullable": "NO",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "message_templates",
+    "column_name": "variables_used",
+    "ordinal_position": 4,
+    "data_type": "ARRAY",
+    "is_nullable": "YES",
+    "column_default": "'{}'::text[]"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "message_templates",
+    "column_name": "usage_count",
+    "ordinal_position": 5,
+    "data_type": "integer",
+    "is_nullable": "YES",
+    "column_default": "0"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "message_templates",
+    "column_name": "response_rate",
+    "ordinal_position": 6,
+    "data_type": "numeric",
+    "is_nullable": "YES",
+    "column_default": "0"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "message_templates",
+    "column_name": "created_at",
+    "ordinal_position": 7,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO",
+    "column_default": "timezone('utc'::text, now())"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "message_templates",
+    "column_name": "updated_at",
+    "ordinal_position": 8,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO",
+    "column_default": "timezone('utc'::text, now())"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "plans",
+    "column_name": "id",
+    "ordinal_position": 1,
+    "data_type": "uuid",
+    "is_nullable": "NO",
+    "column_default": "uuid_generate_v4()"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "plans",
+    "column_name": "name",
+    "ordinal_position": 2,
+    "data_type": "text",
+    "is_nullable": "NO",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "plans",
+    "column_name": "description",
+    "ordinal_position": 3,
+    "data_type": "text",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "plans",
+    "column_name": "price_monthly",
+    "ordinal_position": 4,
+    "data_type": "numeric",
+    "is_nullable": "NO",
+    "column_default": "0"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "plans",
+    "column_name": "leads_limit",
+    "ordinal_position": 5,
+    "data_type": "integer",
+    "is_nullable": "NO",
+    "column_default": "100"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "plans",
+    "column_name": "messages_limit",
+    "ordinal_position": 6,
+    "data_type": "integer",
+    "is_nullable": "NO",
+    "column_default": "500"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "plans",
+    "column_name": "campaigns_limit",
+    "ordinal_position": 7,
+    "data_type": "integer",
+    "is_nullable": "NO",
+    "column_default": "1"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "plans",
+    "column_name": "whatsapp_connections_limit",
+    "ordinal_position": 8,
+    "data_type": "integer",
+    "is_nullable": "NO",
+    "column_default": "1"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "plans",
+    "column_name": "created_at",
+    "ordinal_position": 9,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO",
+    "column_default": "timezone('utc'::text, now())"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "plans",
+    "column_name": "updated_at",
+    "ordinal_position": 10,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO",
+    "column_default": "timezone('utc'::text, now())"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "profiles",
+    "column_name": "id",
+    "ordinal_position": 1,
+    "data_type": "uuid",
+    "is_nullable": "NO",
+    "column_default": "uuid_generate_v4()"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "profiles",
+    "column_name": "user_id",
+    "ordinal_position": 2,
+    "data_type": "uuid",
+    "is_nullable": "NO",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "profiles",
+    "column_name": "full_name",
+    "ordinal_position": 3,
+    "data_type": "text",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "profiles",
+    "column_name": "business_type",
+    "ordinal_position": 4,
+    "data_type": "text",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "profiles",
+    "column_name": "business_size",
+    "ordinal_position": 5,
+    "data_type": "text",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "profiles",
+    "column_name": "is_admin",
+    "ordinal_position": 6,
+    "data_type": "boolean",
+    "is_nullable": "YES",
+    "column_default": "false"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "profiles",
+    "column_name": "is_superadmin",
+    "ordinal_position": 7,
+    "data_type": "boolean",
+    "is_nullable": "YES",
+    "column_default": "false"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "profiles",
+    "column_name": "whatsapp_connections_limit",
+    "ordinal_position": 8,
+    "data_type": "integer",
+    "is_nullable": "YES",
+    "column_default": "1"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "profiles",
+    "column_name": "created_at",
+    "ordinal_position": 9,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO",
+    "column_default": "timezone('utc'::text, now())"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "profiles",
+    "column_name": "updated_at",
+    "ordinal_position": 10,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO",
+    "column_default": "timezone('utc'::text, now())"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "target_preferences",
+    "column_name": "id",
+    "ordinal_position": 1,
+    "data_type": "uuid",
+    "is_nullable": "NO",
+    "column_default": "uuid_generate_v4()"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "target_preferences",
+    "column_name": "user_id",
+    "ordinal_position": 2,
+    "data_type": "uuid",
+    "is_nullable": "NO",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "target_preferences",
+    "column_name": "target_segments",
+    "ordinal_position": 3,
+    "data_type": "ARRAY",
+    "is_nullable": "YES",
+    "column_default": "'{}'::text[]"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "target_preferences",
+    "column_name": "target_locations",
+    "ordinal_position": 4,
+    "data_type": "ARRAY",
+    "is_nullable": "YES",
+    "column_default": "'{}'::text[]"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "target_preferences",
+    "column_name": "created_at",
+    "ordinal_position": 5,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO",
+    "column_default": "timezone('utc'::text, now())"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "target_preferences",
+    "column_name": "updated_at",
+    "ordinal_position": 6,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO",
+    "column_default": "timezone('utc'::text, now())"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "user_plans",
+    "column_name": "id",
+    "ordinal_position": 1,
+    "data_type": "uuid",
+    "is_nullable": "NO",
+    "column_default": "uuid_generate_v4()"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "user_plans",
+    "column_name": "user_id",
+    "ordinal_position": 2,
+    "data_type": "uuid",
+    "is_nullable": "NO",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "user_plans",
+    "column_name": "plan_id",
+    "ordinal_position": 3,
+    "data_type": "uuid",
+    "is_nullable": "NO",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "user_plans",
+    "column_name": "start_date",
+    "ordinal_position": 4,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO",
+    "column_default": "timezone('utc'::text, now())"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "user_plans",
+    "column_name": "end_date",
+    "ordinal_position": 5,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "user_plans",
+    "column_name": "is_active",
+    "ordinal_position": 6,
+    "data_type": "boolean",
+    "is_nullable": "YES",
+    "column_default": "true"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "user_plans",
+    "column_name": "payment_reference",
+    "ordinal_position": 7,
+    "data_type": "text",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "user_plans",
+    "column_name": "created_at",
+    "ordinal_position": 8,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO",
+    "column_default": "timezone('utc'::text, now())"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "user_plans",
+    "column_name": "updated_at",
+    "ordinal_position": 9,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO",
+    "column_default": "timezone('utc'::text, now())"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "whatsapp_connections",
+    "column_name": "id",
+    "ordinal_position": 1,
+    "data_type": "uuid",
+    "is_nullable": "NO",
+    "column_default": "uuid_generate_v4()"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "whatsapp_connections",
+    "column_name": "user_id",
+    "ordinal_position": 2,
+    "data_type": "uuid",
+    "is_nullable": "NO",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "whatsapp_connections",
+    "column_name": "instance_id",
+    "ordinal_position": 3,
+    "data_type": "uuid",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "whatsapp_connections",
+    "column_name": "name",
+    "ordinal_position": 4,
+    "data_type": "text",
+    "is_nullable": "NO",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "whatsapp_connections",
+    "column_name": "status",
+    "ordinal_position": 5,
+    "data_type": "text",
+    "is_nullable": "YES",
+    "column_default": "'disconnected'::text"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "whatsapp_connections",
+    "column_name": "phone_number",
+    "ordinal_position": 6,
+    "data_type": "text",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "whatsapp_connections",
+    "column_name": "connected_at",
+    "ordinal_position": 7,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "whatsapp_connections",
+    "column_name": "last_used_at",
+    "ordinal_position": 8,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "whatsapp_connections",
+    "column_name": "error_message",
+    "ordinal_position": 9,
+    "data_type": "text",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "whatsapp_connections",
+    "column_name": "created_at",
+    "ordinal_position": 10,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO",
+    "column_default": "timezone('utc'::text, now())"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "whatsapp_connections",
+    "column_name": "updated_at",
+    "ordinal_position": 11,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO",
+    "column_default": "timezone('utc'::text, now())"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "whatsapp_instances",
+    "column_name": "id",
+    "ordinal_position": 1,
+    "data_type": "uuid",
+    "is_nullable": "NO",
+    "column_default": "uuid_generate_v4()"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "whatsapp_instances",
+    "column_name": "name",
+    "ordinal_position": 2,
+    "data_type": "text",
+    "is_nullable": "NO",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "whatsapp_instances",
+    "column_name": "instance_id",
+    "ordinal_position": 3,
+    "data_type": "text",
+    "is_nullable": "NO",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "whatsapp_instances",
+    "column_name": "api_key",
+    "ordinal_position": 4,
+    "data_type": "text",
+    "is_nullable": "NO",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "whatsapp_instances",
+    "column_name": "host",
+    "ordinal_position": 5,
+    "data_type": "text",
+    "is_nullable": "NO",
+    "column_default": "'https://api.z-api.io'::text"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "whatsapp_instances",
+    "column_name": "is_available",
+    "ordinal_position": 6,
+    "data_type": "boolean",
+    "is_nullable": "YES",
+    "column_default": "true"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "whatsapp_instances",
+    "column_name": "current_user_id",
+    "ordinal_position": 7,
+    "data_type": "uuid",
+    "is_nullable": "YES",
+    "column_default": null
+  },
+  {
+    "table_schema": "public",
+    "table_name": "whatsapp_instances",
+    "column_name": "max_free_users",
+    "ordinal_position": 8,
+    "data_type": "integer",
+    "is_nullable": "YES",
+    "column_default": "5"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "whatsapp_instances",
+    "column_name": "current_free_users",
+    "ordinal_position": 9,
+    "data_type": "integer",
+    "is_nullable": "YES",
+    "column_default": "0"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "whatsapp_instances",
+    "column_name": "created_at",
+    "ordinal_position": 10,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO",
+    "column_default": "timezone('utc'::text, now())"
+  },
+  {
+    "table_schema": "public",
+    "table_name": "whatsapp_instances",
+    "column_name": "updated_at",
+    "ordinal_position": 11,
+    "data_type": "timestamp with time zone",
+    "is_nullable": "NO",
+    "column_default": "timezone('utc'::text, now())"
+  }
+]

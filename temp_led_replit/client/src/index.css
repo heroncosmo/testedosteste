@@ -1,0 +1,272 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 60 4.8% 95.9%;
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 60 4.8% 95.9%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+  
+  /* Custom Lead Pilot colors */
+  --whatsapp: 141 84% 44%; /* #25D366 */
+  --whatsapp-dark: 162 77% 28%; /* #128C7E */
+  --conversion: 17 100% 60%; /* #FF6B35 */
+  --conversion-dark: 17 82% 54%; /* #E55A2B */
+  --action-blue: 217 91% 60%; /* #3B82F6 */
+  --action-blue-dark: 224 76% 48%; /* #1E40AF */
+  --success: 158 64% 52%; /* #10B981 */
+  --warning: 45 93% 47%; /* #F59E0B */
+  --danger: 0 84% 60%; /* #EF4444 */
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Lead Pilot Custom Styles */
+.blur-text {
+  filter: blur(3px);
+  user-select: none;
+  pointer-events: none;
+}
+
+.partial-blur {
+  background: linear-gradient(90deg, transparent 20%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.1) 60%, transparent 80%);
+  backdrop-filter: blur(2px);
+  border-radius: 4px;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.selection-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: hsl(var(--whatsapp) / 0.2);
+  border: 2px solid hsl(var(--whatsapp));
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.selected .selection-overlay::before {
+  opacity: 1;
+}
+
+.chat-bubble {
+  max-width: 85%;
+  word-wrap: break-word;
+}
+
+.sent {
+  background: #dcf8c6;
+  margin-left: auto;
+}
+
+.received {
+  background: white;
+  margin-right: auto;
+}
+
+/* Custom animations */
+@keyframes slideUp {
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceGentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+@keyframes blurReveal {
+  0% { filter: blur(8px); opacity: 0.7; }
+  100% { filter: blur(0px); opacity: 1; }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.animate-bounce-gentle {
+  animation: bounceGentle 2s infinite;
+}
+
+.animate-wiggle {
+  animation: wiggle 1s ease-in-out infinite;
+}
+
+.animate-blur-reveal {
+  animation: blurReveal 0.6s ease-out;
+}
+
+/* Utility classes */
+.text-whatsapp {
+  color: hsl(var(--whatsapp));
+}
+
+.text-whatsapp-dark {
+  color: hsl(var(--whatsapp-dark));
+}
+
+.text-conversion {
+  color: hsl(var(--conversion));
+}
+
+.text-conversion-dark {
+  color: hsl(var(--conversion-dark));
+}
+
+.text-action-blue {
+  color: hsl(var(--action-blue));
+}
+
+.text-action-blue-dark {
+  color: hsl(var(--action-blue-dark));
+}
+
+.text-success {
+  color: hsl(var(--success));
+}
+
+.text-warning {
+  color: hsl(var(--warning));
+}
+
+.text-danger {
+  color: hsl(var(--danger));
+}
+
+.bg-whatsapp {
+  background-color: hsl(var(--whatsapp));
+}
+
+.bg-whatsapp-dark {
+  background-color: hsl(var(--whatsapp-dark));
+}
+
+.bg-conversion {
+  background-color: hsl(var(--conversion));
+}
+
+.bg-conversion-dark {
+  background-color: hsl(var(--conversion-dark));
+}
+
+.bg-action-blue {
+  background-color: hsl(var(--action-blue));
+}
+
+.bg-action-blue-dark {
+  background-color: hsl(var(--action-blue-dark));
+}
+
+.bg-success {
+  background-color: hsl(var(--success));
+}
+
+.bg-warning {
+  background-color: hsl(var(--warning));
+}
+
+.bg-danger {
+  background-color: hsl(var(--danger));
+}
+
+.hover\:bg-whatsapp-dark:hover {
+  background-color: hsl(var(--whatsapp-dark));
+}
+
+.hover\:bg-conversion-dark:hover {
+  background-color: hsl(var(--conversion-dark));
+}
+
+.hover\:bg-action-blue-dark:hover {
+  background-color: hsl(var(--action-blue-dark));
+}
+
+.hover\:text-whatsapp:hover {
+  color: hsl(var(--whatsapp));
+}
+
+.hover\:text-whatsapp-dark:hover {
+  color: hsl(var(--whatsapp-dark));
+}
+
+.hover\:text-conversion:hover {
+  color: hsl(var(--conversion));
+}
+
+.hover\:text-warning:hover {
+  color: hsl(var(--warning));
+}
