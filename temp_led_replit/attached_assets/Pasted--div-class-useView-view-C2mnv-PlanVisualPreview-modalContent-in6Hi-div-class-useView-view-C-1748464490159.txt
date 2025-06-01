@@ -1,0 +1,1064 @@
+<div class=" useView_view__C2mnv PlanVisualPreview_modalContent__in6Hi"><div class=" useView_view__C2mnv" style="--useView--grow: 1;"><iframe title="visual-preview" sandbox="allow-same-origin allow-presentation allow-pointer-lock allow-scripts" allow="accelerometer; ambient-light-sensor; autoplay; battery; camera; display-capture; encrypted-media; execution-while-not-rendered; execution-while-out-of-viewport; fullscreen; gamepad; geolocation; gyroscope; layout-animations; legacy-image-formats; magnetometer; microphone; midi; navigation-override; oversized-images; payment; picture-in-picture; publickey-credentials; speaker-selection; sync-xhr; unoptimized-images; unsized-media; usb; screen-wake-lock; web-share; xr-spatial-tracking; clipboard-read; clipboard-write; pointer-lock" class="AgentHtmlPreviewFromDisk_iframe___vd38" srcdoc="<!DOCTYPE html>
+<html lang=&quot;pt-BR&quot;>
+<head>
+    <meta charset=&quot;UTF-8&quot;>
+    <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+    <title>Lead Pilot - Networking Empresarial Inteligente</title>
+    <script src=&quot;https://cdn.tailwindcss.com&quot;></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    'whatsapp': '#25D366',
+                    'whatsapp-dark': '#128C7E',
+                    'conversion': '#FF6B35',
+                    'conversion-dark': '#E55A2B',
+                    'action-blue': '#3B82F6',
+                    'action-blue-dark': '#1E40AF',
+                    'success': '#10B981',
+                    'warning': '#F59E0B',
+                    'danger': '#EF4444'
+                },
+                fontFamily: {
+                    'sans': ['Inter', 'system-ui', 'sans-serif']
+                },
+                animation: {
+                    'slide-up': 'slideUp 0.3s ease-out',
+                    'fade-in': 'fadeIn 0.5s ease-out',
+                    'pulse-slow': 'pulse 3s infinite',
+                    'bounce-gentle': 'bounceGentle 2s infinite',
+                    'wiggle': 'wiggle 1s ease-in-out infinite',
+                    'blur-reveal': 'blurReveal 0.6s ease-out'
+                },
+                keyframes: {
+                    slideUp: {
+                        '0%': { transform: 'translateY(100%)' },
+                        '100%': { transform: 'translateY(0)' }
+                    },
+                    fadeIn: {
+                        '0%': { opacity: '0', transform: 'translateY(20px)' },
+                        '100%': { opacity: '1', transform: 'translateY(0)' }
+                    },
+                    bounceGentle: {
+                        '0%, 100%': { transform: 'translateY(0)' },
+                        '50%': { transform: 'translateY(-5px)' }
+                    },
+                    wiggle: {
+                        '0%, 100%': { transform: 'rotate(-3deg)' },
+                        '50%': { transform: 'rotate(3deg)' }
+                    },
+                    blurReveal: {
+                        '0%': { filter: 'blur(8px)', opacity: '0.7' },
+                        '100%': { filter: 'blur(0px)', opacity: '1' }
+                    }
+                },
+                backgroundImage: {
+                    'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                }
+            }
+        }
+    };
+    </script>
+    <link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css&quot;>
+    <style>
+        .blur-text {
+            filter: blur(3px);
+            user-select: none;
+            pointer-events: none;
+        }
+        .partial-blur {
+            background: linear-gradient(90deg, transparent 20%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.1) 60%, transparent 80%);
+            backdrop-filter: blur(2px);
+            border-radius: 4px;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .selection-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(37, 211, 102, 0.2);
+            border: 2px solid #25D366;
+            border-radius: inherit;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        .selected .selection-overlay::before {
+            opacity: 1;
+        }
+        .chat-bubble {
+            max-width: 85%;
+            word-wrap: break-word;
+        }
+        .sent {
+            background: #dcf8c6;
+            margin-left: auto;
+        }
+        .received {
+            background: white;
+            margin-right: auto;
+        }
+    </style>
+<style>body { pointer-events: none; }</style></head>
+
+<body class=&quot;bg-gray-50 font-sans overflow-x-hidden&quot;>
+    <!-- @COMPONENT: MobileApp [Main container with zero friction design] -->
+    <div class=&quot;min-h-screen flex flex-col max-w-md mx-auto bg-white shadow-xl relative&quot;>
+        
+        <!-- @COMPONENT: WelcomeNotification [Auto-hide welcome message] -->
+        <div id=&quot;welcomeNotification&quot; class=&quot;absolute top-0 left-0 right-0 bg-whatsapp text-white px-4 py-3 z-50 animate-slide-up&quot;>
+            <div class=&quot;flex items-center justify-between&quot;>
+                <div class=&quot;flex items-center space-x-2&quot;>
+                    <i class=&quot;fas fa-rocket animate-bounce-gentle&quot;></i>
+                    <span class=&quot;text-sm font-medium&quot;>Bem-vindo! Encontramos 1.247 oportunidades para você</span>
+                </div>
+                <button onclick=&quot;hideWelcome()&quot; class=&quot;text-white/80 hover:text-white&quot;>
+                    <i class=&quot;fas fa-times&quot;></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- @COMPONENT: TopStatusBar [Enhanced header with credits and notifications] -->
+        <div class=&quot;bg-whatsapp text-white px-4 py-3 flex justify-between items-center sticky top-0 z-40&quot;>
+            <div class=&quot;flex items-center space-x-3&quot;>
+                <div class=&quot;w-8 h-8 bg-white rounded-lg flex items-center justify-center&quot;>
+                    <i class=&quot;fas fa-rocket text-whatsapp text-sm&quot;></i>
+                </div>
+                <div>
+                    <span class=&quot;font-bold text-lg&quot;>Lead Pilot</span>
+                    <p class=&quot;text-xs text-white/80&quot;>Networking Inteligente</p>
+                </div>
+            </div>
+            <div class=&quot;flex items-center space-x-3&quot;>
+                <!-- Enhanced Credits with progress bar -->
+                <div class=&quot;flex flex-col items-end&quot;>
+                    <div class=&quot;bg-white/20 px-3 py-1 rounded-full text-xs font-medium flex items-center space-x-1&quot;>
+                        <i class=&quot;fas fa-coins text-yellow-300&quot;></i>
+                        <span data-bind=&quot;user.creditsRemaining&quot;>7</span>
+                        <span>/10</span>
+                    </div>
+                    <div class=&quot;w-16 h-1 bg-white/20 rounded-full mt-1&quot;>
+                        <div class=&quot;w-7/10 h-full bg-yellow-300 rounded-full transition-all duration-300&quot;></div>
+                    </div>
+                </div>
+                <!-- Notification with badge -->
+                <div class=&quot;relative&quot;>
+                    <i class=&quot;fas fa-bell text-lg&quot;></i>
+                    <span class=&quot;absolute -top-1 -right-1 bg-conversion w-3 h-3 rounded-full text-xs flex items-center justify-center font-bold animate-pulse&quot;>3</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- @COMPONENT: SearchAndFilters [Centralized functional search] -->
+        <div class=&quot;p-4 bg-white sticky top-16 z-30 border-b border-gray-100&quot;>
+            <div class=&quot;relative mb-3&quot;>
+                <i class=&quot;fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400&quot;></i>
+                <input type=&quot;text&quot; placeholder=&quot;Buscar empresas, segmentos...&quot; 
+                       class=&quot;w-full pl-10 pr-4 py-3 bg-gray-50 rounded-2xl border-0 focus:bg-white focus:ring-2 focus:ring-whatsapp/20 transition-all text-sm&quot;
+                       data-bind=&quot;search.query&quot;
+                       onkeyup=&quot;handleSearch(this.value)&quot;>
+            </div>
+            
+            <!-- Functional filters -->
+            <div class=&quot;flex space-x-2 overflow-x-auto pb-1 scrollbar-hide&quot;>
+                <button class=&quot;flex-shrink-0 bg-whatsapp text-white px-4 py-2 rounded-full text-xs font-medium flex items-center space-x-1 active-filter&quot;>
+                    <i class=&quot;fas fa-fire&quot;></i>
+                    <span>Quentes</span>
+                    <span class=&quot;bg-white/20 px-1.5 py-0.5 rounded-full text-xs&quot;>247</span>
+                </button>
+                <button class=&quot;flex-shrink-0 bg-gray-100 text-gray-600 px-4 py-2 rounded-full text-xs font-medium flex items-center space-x-1 hover:bg-gray-200 transition-colors filter-btn&quot; data-filter=&quot;restaurantes&quot;>
+                    <i class=&quot;fas fa-utensils&quot;></i>
+                    <span>Restaurantes</span>
+                </button>
+                <button class=&quot;flex-shrink-0 bg-gray-100 text-gray-600 px-4 py-2 rounded-full text-xs font-medium flex items-center space-x-1 hover:bg-gray-200 transition-colors filter-btn&quot; data-filter=&quot;clinicas&quot;>
+                    <i class=&quot;fas fa-stethoscope&quot;></i>
+                    <span>Clínicas</span>
+                </button>
+                <button class=&quot;flex-shrink-0 bg-gray-100 text-gray-600 px-4 py-2 rounded-full text-xs font-medium flex items-center space-x-1 hover:bg-gray-200 transition-colors filter-btn&quot; data-filter=&quot;tech&quot;>
+                    <i class=&quot;fas fa-laptop-code&quot;></i>
+                    <span>Tech</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- @COMPONENT: BulkSelectionBar [Shows when multiple leads selected] -->
+        <div id=&quot;selectionBar&quot; class=&quot;bg-whatsapp text-white px-4 py-3 flex justify-between items-center hidden animate-slide-up sticky top-32 z-30&quot;>
+            <div class=&quot;flex items-center space-x-3&quot;>
+                <button onclick=&quot;clearSelection()&quot; class=&quot;p-1 hover:bg-white/20 rounded-full transition-colors&quot;>
+                    <i class=&quot;fas fa-times&quot;></i>
+                </button>
+                <span class=&quot;font-medium&quot; data-bind=&quot;selection.count&quot;>3 selecionados</span>
+            </div>
+            <div class=&quot;flex space-x-3&quot;>
+                <button onclick=&quot;openBulkMessage()&quot; class=&quot;flex items-center space-x-2 bg-white/20 px-4 py-2 rounded-lg hover:bg-white/30 transition-colors&quot;>
+                    <i class=&quot;fab fa-whatsapp&quot;></i>
+                    <span class=&quot;text-sm font-medium&quot;>Enviar WhatsApp</span>
+                </button>
+                <button onclick=&quot;bulkFavorite()&quot; class=&quot;p-2 hover:bg-white/20 rounded-full transition-colors&quot;>
+                    <i class=&quot;fas fa-star&quot;></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- @COMPONENT: InfiniteFeed [Main scrollable feed area] -->
+        <div class=&quot;flex-1 overflow-y-auto pb-20&quot; id=&quot;leadsFeed&quot;>
+            
+            <!-- @MAP: leads.map(lead => ( -->
+            <!-- Premium Unlocked Lead Card 1 -->
+            <div class=&quot;bg-white border-b border-gray-50 p-4 relative hover:bg-gray-25 transition-colors lead-card&quot; data-lead-id=&quot;1&quot; data-unlocked=&quot;true&quot;>
+                <div class=&quot;flex items-start space-x-3&quot;>
+                    <!-- Checkbox and Avatar -->
+                    <div class=&quot;relative&quot;>
+                        <input type=&quot;checkbox&quot; class=&quot;absolute top-0 left-0 w-5 h-5 opacity-0 z-10 cursor-pointer selection-checkbox&quot; 
+                               onchange=&quot;toggleSelection(this, 1)&quot; onclick=&quot;event.stopPropagation()&quot;>
+                        <div class=&quot;w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center font-bold text-lg text-white selection-overlay&quot;>
+                            TS
+                        </div>
+                        <!-- Premium badge -->
+                        <div class=&quot;absolute -top-1 -right-1 bg-gradient-to-r from-amber-400 to-amber-500 w-5 h-5 rounded-full text-white text-xs flex items-center justify-center font-bold&quot;>
+                            ⭐
+                        </div>
+                    </div>
+                    
+                    <!-- Lead Content -->
+                    <div class=&quot;flex-1 min-w-0&quot;>
+                        <div class=&quot;flex justify-between items-start mb-2&quot;>
+                            <div>
+                                <h3 class=&quot;font-bold text-gray-900 truncate text-base&quot; data-bind=&quot;lead.company&quot;>TechSolutions LTDA</h3>
+                                <p class=&quot;text-sm text-gray-600&quot;>Desenvolvimento de Software</p>
+                            </div>
+                            <div class=&quot;flex flex-col items-end space-y-1&quot;>
+                                <span class=&quot;bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-bold&quot;>95% Match</span>
+                                <button onclick=&quot;toggleFavorite(1); event.stopPropagation();&quot; class=&quot;text-gray-400 hover:text-yellow-500 transition-colors&quot;>
+                                    <i class=&quot;fas fa-star&quot;></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Location and Company Info -->
+                        <div class=&quot;flex items-center justify-between text-xs text-gray-500 mb-3&quot;>
+                            <div class=&quot;flex items-center space-x-2&quot;>
+                                <i class=&quot;fas fa-map-marker-alt&quot;></i>
+                                <span>São Paulo, SP</span>
+                                <span>•</span>
+                                <span>50-100 funcionários</span>
+                            </div>
+                        </div>
+                        
+                        <!-- AI Insights Always Visible -->
+                        <div class=&quot;bg-blue-50 border border-blue-100 rounded-lg p-3 mb-3&quot;>
+                            <div class=&quot;flex items-center space-x-2 mb-1&quot;>
+                                <i class=&quot;fas fa-brain text-blue-600 text-sm&quot;></i>
+                                <span class=&quot;text-xs font-medium text-blue-800&quot;>IA Insights</span>
+                            </div>
+                            <p class=&quot;text-xs text-blue-700&quot;>Alta probabilidade de conversão • Melhor horário: 14h-16h • Segmento em crescimento +23%</p>
+                        </div>
+                        
+                        <!-- Contact Person (Unlocked) -->
+                        <div class=&quot;flex items-center justify-between mb-3&quot;>
+                            <div class=&quot;flex items-center space-x-2&quot;>
+                                <div class=&quot;w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center&quot;>
+                                    <span class=&quot;text-sm font-medium text-gray-600&quot;>CM</span>
+                                </div>
+                                <div>
+                                    <p class=&quot;text-sm font-medium text-gray-900&quot;>Carlos Mendes</p>
+                                    <p class=&quot;text-xs text-gray-500&quot;>CTO</p>
+                                </div>
+                            </div>
+                            <div class=&quot;flex space-x-2&quot;>
+                                <span class=&quot;text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full&quot;>📧 Email disponível</span>
+                                <span class=&quot;text-xs text-whatsapp bg-green-50 px-2 py-1 rounded-full&quot;>📱 WhatsApp</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Action Buttons (Unlocked) -->
+                        <div class=&quot;flex space-x-2&quot;>
+                            <button onclick=&quot;openWhatsApp(1)&quot; class=&quot;flex-1 bg-whatsapp text-white py-2 px-4 rounded-lg font-medium text-sm hover:bg-whatsapp-dark transition-colors flex items-center justify-center space-x-2&quot;>
+                                <i class=&quot;fab fa-whatsapp&quot;></i>
+                                <span>WhatsApp</span>
+                            </button>
+                            <button onclick=&quot;openEmail(1)&quot; class=&quot;flex-1 bg-action-blue text-white py-2 px-4 rounded-lg font-medium text-sm hover:bg-action-blue-dark transition-colors flex items-center justify-center space-x-2&quot;>
+                                <i class=&quot;fas fa-envelope&quot;></i>
+                                <span>Email</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Locked Lead Card 2 with Smart Blur -->
+            <div class=&quot;bg-white border-b border-gray-50 p-4 relative hover:bg-gray-25 transition-colors lead-card&quot; data-lead-id=&quot;2&quot; data-unlocked=&quot;false&quot;>
+                <div class=&quot;flex items-start space-x-3&quot;>
+                    <!-- Checkbox and Avatar -->
+                    <div class=&quot;relative&quot;>
+                        <input type=&quot;checkbox&quot; class=&quot;absolute top-0 left-0 w-5 h-5 opacity-0 z-10 cursor-pointer selection-checkbox&quot; 
+                               onchange=&quot;toggleSelection(this, 2)&quot; onclick=&quot;event.stopPropagation()&quot;>
+                        <div class=&quot;w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center font-bold text-lg text-white selection-overlay&quot;>
+                            CM
+                        </div>
+                    </div>
+                    
+                    <!-- Lead Content -->
+                    <div class=&quot;flex-1 min-w-0&quot;>
+                        <div class=&quot;flex justify-between items-start mb-2&quot;>
+                            <div>
+                                <!-- Smart Blur: Beginning and end visible, middle blurred -->
+                                <h3 class=&quot;font-bold text-gray-900 truncate text-base relative&quot; data-bind=&quot;lead.company&quot;>
+                                    <span>Clínica</span><span class=&quot;partial-blur px-1&quot;>••••••••••</span><span>Central</span>
+                                </h3>
+                                <p class=&quot;text-sm text-gray-600&quot;>Clínica Médica • Particular</p>
+                            </div>
+                            <div class=&quot;flex flex-col items-end space-y-1&quot;>
+                                <span class=&quot;bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-bold&quot;>92% Match</span>
+                                <button onclick=&quot;toggleFavorite(2); event.stopPropagation();&quot; class=&quot;text-gray-400 hover:text-yellow-500 transition-colors&quot;>
+                                    <i class=&quot;fas fa-star&quot;></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Location and Company Info (Always Visible) -->
+                        <div class=&quot;flex items-center justify-between text-xs text-gray-500 mb-3&quot;>
+                            <div class=&quot;flex items-center space-x-2&quot;>
+                                <i class=&quot;fas fa-map-marker-alt&quot;></i>
+                                <span>Moema, SP</span>
+                                <span>•</span>
+                                <span>50+ funcionários</span>
+                            </div>
+                        </div>
+                        
+                        <!-- AI Insights Always Visible -->
+                        <div class=&quot;bg-orange-50 border border-orange-100 rounded-lg p-3 mb-3&quot;>
+                            <div class=&quot;flex items-center space-x-2 mb-1&quot;>
+                                <i class=&quot;fas fa-fire text-orange-600 text-sm&quot;></i>
+                                <span class=&quot;text-xs font-medium text-orange-800&quot;>Alta demanda</span>
+                            </div>
+                            <p class=&quot;text-xs text-orange-700&quot;>12 usuários visualizaram nas últimas 24h. 87% de taxa de resposta neste segmento.</p>
+                        </div>
+                        
+                        <!-- Locked Contact Info -->
+                        <div class=&quot;bg-gray-50 border border-gray-200 rounded-lg p-3 mb-3&quot;>
+                            <div class=&quot;flex items-center justify-center space-x-2 text-gray-500&quot;>
+                                <i class=&quot;fas fa-lock&quot;></i>
+                                <span class=&quot;text-sm&quot;>Desbloqueie para ver contatos</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Unlock Button -->
+                        <button onclick=&quot;unlockLead(2)&quot; class=&quot;w-full bg-conversion text-white py-3 px-4 rounded-lg font-medium text-sm hover:bg-conversion-dark transition-colors flex items-center justify-center space-x-2&quot;>
+                            <i class=&quot;fas fa-unlock&quot;></i>
+                            <span>🔒 Desbloquear por 1 Crédito</span>
+                        </button>
+                        <p class=&quot;text-xs text-center text-gray-500 mt-2&quot;>Acesso total + WhatsApp + Email</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Another Unlocked Lead Card 3 -->
+            <div class=&quot;bg-white border-b border-gray-50 p-4 relative hover:bg-gray-25 transition-colors lead-card&quot; data-lead-id=&quot;3&quot; data-unlocked=&quot;true&quot;>
+                <div class=&quot;flex items-start space-x-3&quot;>
+                    <!-- Checkbox and Avatar -->
+                    <div class=&quot;relative&quot;>
+                        <input type=&quot;checkbox&quot; class=&quot;absolute top-0 left-0 w-5 h-5 opacity-0 z-10 cursor-pointer selection-checkbox&quot; 
+                               onchange=&quot;toggleSelection(this, 3)&quot; onclick=&quot;event.stopPropagation()&quot;>
+                        <div class=&quot;w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center font-bold text-lg text-white selection-overlay&quot;>
+                            RS
+                        </div>
+                    </div>
+                    
+                    <!-- Lead Content -->
+                    <div class=&quot;flex-1 min-w-0&quot;>
+                        <div class=&quot;flex justify-between items-start mb-2&quot;>
+                            <div>
+                                <h3 class=&quot;font-bold text-gray-900 truncate text-base&quot; data-bind=&quot;lead.company&quot;>Restaurante Sabor &amp; Arte</h3>
+                                <p class=&quot;text-sm text-gray-600&quot;>Restaurante • Gourmet</p>
+                            </div>
+                            <div class=&quot;flex flex-col items-end space-y-1&quot;>
+                                <span class=&quot;bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full font-bold&quot;>88% Match</span>
+                                <button onclick=&quot;toggleFavorite(3); event.stopPropagation();&quot; class=&quot;text-yellow-500 hover:text-yellow-600 transition-colors&quot;>
+                                    <i class=&quot;fas fa-star&quot;></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Location and Company Info -->
+                        <div class=&quot;flex items-center justify-between text-xs text-gray-500 mb-3&quot;>
+                            <div class=&quot;flex items-center space-x-2&quot;>
+                                <i class=&quot;fas fa-map-marker-alt&quot;></i>
+                                <span>Vila Madalena, SP</span>
+                                <span>•</span>
+                                <span>15-30 funcionários</span>
+                            </div>
+                        </div>
+                        
+                        <!-- AI Insights Always Visible -->
+                        <div class=&quot;bg-green-50 border border-green-100 rounded-lg p-3 mb-3&quot;>
+                            <div class=&quot;flex items-center space-x-2 mb-1&quot;>
+                                <i class=&quot;fas fa-chart-line text-green-600 text-sm&quot;></i>
+                                <span class=&quot;text-xs font-medium text-green-800&quot;>Crescimento</span>
+                            </div>
+                            <p class=&quot;text-xs text-green-700&quot;>Movimento crescente • Melhor contato: 10h-12h • Delivery em expansão +40%</p>
+                        </div>
+                        
+                        <!-- Contact Person (Unlocked) -->
+                        <div class=&quot;flex items-center justify-between mb-3&quot;>
+                            <div class=&quot;flex items-center space-x-2&quot;>
+                                <div class=&quot;w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center&quot;>
+                                    <span class=&quot;text-sm font-medium text-gray-600&quot;>AM</span>
+                                </div>
+                                <div>
+                                    <p class=&quot;text-sm font-medium text-gray-900&quot;>Ana Maria Silva</p>
+                                    <p class=&quot;text-xs text-gray-500&quot;>Proprietária</p>
+                                </div>
+                            </div>
+                            <div class=&quot;flex space-x-2&quot;>
+                                <span class=&quot;text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full&quot;>📧 Email disponível</span>
+                                <span class=&quot;text-xs text-whatsapp bg-green-50 px-2 py-1 rounded-full&quot;>📱 WhatsApp</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Action Buttons (Unlocked) -->
+                        <div class=&quot;flex space-x-2&quot;>
+                            <button onclick=&quot;openWhatsApp(3)&quot; class=&quot;flex-1 bg-whatsapp text-white py-2 px-4 rounded-lg font-medium text-sm hover:bg-whatsapp-dark transition-colors flex items-center justify-center space-x-2&quot;>
+                                <i class=&quot;fab fa-whatsapp&quot;></i>
+                                <span>WhatsApp</span>
+                            </button>
+                            <button onclick=&quot;openEmail(3)&quot; class=&quot;flex-1 bg-action-blue text-white py-2 px-4 rounded-lg font-medium text-sm hover:bg-action-blue-dark transition-colors flex items-center justify-center space-x-2&quot;>
+                                <i class=&quot;fas fa-envelope&quot;></i>
+                                <span>Email</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Premium Locked Lead Card 4 -->
+            <div class=&quot;bg-gradient-to-r from-amber-50 to-amber-100 border-b border-amber-200 p-4 relative hover:bg-amber-50 transition-colors lead-card&quot; data-lead-id=&quot;4&quot; data-unlocked=&quot;false&quot; data-premium=&quot;true&quot;>
+                <div class=&quot;absolute top-2 right-2&quot;>
+                    <div class=&quot;bg-gradient-to-r from-amber-400 to-amber-500 text-white px-2 py-1 rounded-full text-xs font-bold flex items-center space-x-1&quot;>
+                        <i class=&quot;fas fa-crown&quot;></i>
+                        <span>Lead Premium</span>
+                    </div>
+                </div>
+                
+                <div class=&quot;flex items-start space-x-3&quot;>
+                    <!-- Checkbox and Avatar -->
+                    <div class=&quot;relative&quot;>
+                        <input type=&quot;checkbox&quot; class=&quot;absolute top-0 left-0 w-5 h-5 opacity-0 z-10 cursor-pointer selection-checkbox&quot; 
+                               onchange=&quot;toggleSelection(this, 4)&quot; onclick=&quot;event.stopPropagation()&quot;>
+                        <div class=&quot;w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl flex items-center justify-center font-bold text-lg text-white selection-overlay&quot;>
+                            TP
+                        </div>
+                        <!-- Crown badge -->
+                        <div class=&quot;absolute -top-1 -right-1 bg-gradient-to-r from-amber-400 to-amber-500 w-5 h-5 rounded-full text-white text-xs flex items-center justify-center font-bold&quot;>
+                            👑
+                        </div>
+                    </div>
+                    
+                    <!-- Lead Content -->
+                    <div class=&quot;flex-1 min-w-0&quot;>
+                        <div class=&quot;flex justify-between items-start mb-2&quot;>
+                            <div>
+                                <!-- Smart Blur for Premium -->
+                                <h3 class=&quot;font-bold text-gray-900 truncate text-base relative&quot; data-bind=&quot;lead.company&quot;>
+                                    <span>Tech</span><span class=&quot;partial-blur px-1&quot;>••••••••••••</span><span>Pro</span>
+                                </h3>
+                                <p class=&quot;text-sm text-gray-600&quot;>Consultoria em TI • Enterprise</p>
+                            </div>
+                            <div class=&quot;flex flex-col items-end space-y-1&quot;>
+                                <span class=&quot;bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full font-bold&quot;>98% Match</span>
+                                <button onclick=&quot;toggleFavorite(4); event.stopPropagation();&quot; class=&quot;text-gray-400 hover:text-yellow-500 transition-colors&quot;>
+                                    <i class=&quot;fas fa-star&quot;></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Location and Company Info (Always Visible) -->
+                        <div class=&quot;flex items-center justify-between text-xs text-gray-500 mb-3&quot;>
+                            <div class=&quot;flex items-center space-x-2&quot;>
+                                <i class=&quot;fas fa-map-marker-alt&quot;></i>
+                                <span>Faria Lima, SP</span>
+                                <span>•</span>
+                                <span>200+ funcionários</span>
+                            </div>
+                        </div>
+                        
+                        <!-- AI Insights Always Visible -->
+                        <div class=&quot;bg-purple-50 border border-purple-100 rounded-lg p-3 mb-3&quot;>
+                            <div class=&quot;flex items-center space-x-2 mb-1&quot;>
+                                <i class=&quot;fas fa-star text-purple-600 text-sm&quot;></i>
+                                <span class=&quot;text-xs font-medium text-purple-800&quot;>Potencial Premium</span>
+                            </div>
+                            <p class=&quot;text-xs text-purple-700&quot;>Potencial de R$ 100k+ em vendas • Decisor direto • Histórico de investimento em soluções</p>
+                        </div>
+                        
+                        <!-- Premium Tease -->
+                        <div class=&quot;bg-amber-100 border border-amber-300 rounded-lg p-3 mb-3&quot;>
+                            <div class=&quot;flex items-center justify-center space-x-2 text-amber-800&quot;>
+                                <i class=&quot;fas fa-crown&quot;></i>
+                                <span class=&quot;text-sm font-medium&quot;>Lead Premium Bloqueado</span>
+                            </div>
+                            <p class=&quot;text-xs text-center text-amber-700 mt-1&quot;>Contato executivo + dados completos</p>
+                        </div>
+                        
+                        <!-- Premium Upgrade Button -->
+                        <button onclick=&quot;upgradeToPremium()&quot; class=&quot;w-full bg-gradient-to-r from-amber-400 to-amber-500 text-white py-3 px-4 rounded-lg font-medium text-sm hover:from-amber-500 hover:to-amber-600 transition-all flex items-center justify-center space-x-2&quot;>
+                            <i class=&quot;fas fa-crown&quot;></i>
+                            <span>Upgrade para Desbloquear</span>
+                        </button>
+                        <p class=&quot;text-xs text-center text-amber-600 mt-2&quot;>Desbloqueios ilimitados + IA avançada</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Indicator -->
+            <div class=&quot;p-6 text-center&quot;>
+                <div class=&quot;flex items-center justify-center space-x-2 text-gray-500&quot;>
+                    <div class=&quot;animate-spin w-4 h-4 border-2 border-whatsapp border-t-transparent rounded-full&quot;></div>
+                    <span class=&quot;text-sm&quot;>Carregando mais oportunidades...</span>
+                </div>
+            </div>
+            <!-- @END_MAP )) -->
+
+        </div>
+
+        <!-- @COMPONENT: FloatingBottomNavigation [Bottom navigation for quick access] -->
+        <div class=&quot;fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-md bg-white border-t border-gray-200 px-4 py-2 z-50&quot;>
+            <div class=&quot;flex justify-around&quot;>
+                <button class=&quot;flex flex-col items-center space-y-1 p-2 text-whatsapp&quot;>
+                    <i class=&quot;fas fa-home text-lg&quot;></i>
+                    <span class=&quot;text-xs font-medium&quot;>Feed</span>
+                    <div class=&quot;w-1 h-1 bg-whatsapp rounded-full&quot;></div>
+                </button>
+                <button class=&quot;flex flex-col items-center space-y-1 p-2 text-gray-400 hover:text-gray-600 transition-colors&quot; onclick=&quot;showConversations()&quot;>
+                    <div class=&quot;relative&quot;>
+                        <i class=&quot;fas fa-comment-dots text-lg&quot;></i>
+                        <span class=&quot;absolute -top-1 -right-1 bg-conversion w-2 h-2 rounded-full&quot;></span>
+                    </div>
+                    <span class=&quot;text-xs&quot;>Conversas</span>
+                </button>
+                <button class=&quot;flex flex-col items-center space-y-1 p-2 text-gray-400 hover:text-gray-600 transition-colors&quot; onclick=&quot;showFavorites()&quot;>
+                    <i class=&quot;fas fa-star text-lg&quot;></i>
+                    <span class=&quot;text-xs&quot;>Favoritos</span>
+                </button>
+                <button class=&quot;flex flex-col items-center space-y-1 p-2 text-gray-400 hover:text-gray-600 transition-colors&quot; onclick=&quot;showAnalytics()&quot;>
+                    <i class=&quot;fas fa-chart-line text-lg&quot;></i>
+                    <span class=&quot;text-xs&quot;>Analytics</span>
+                </button>
+                <button class=&quot;flex flex-col items-center space-y-1 p-2 text-gray-400 hover:text-gray-600 transition-colors&quot; onclick=&quot;showProfile()&quot;>
+                    <i class=&quot;fas fa-user text-lg&quot;></i>
+                    <span class=&quot;text-xs&quot;>Perfil</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- @COMPONENT: WhatsAppModal [WhatsApp conversation modal] -->
+    <div id=&quot;whatsappModal&quot; class=&quot;fixed inset-0 bg-black bg-opacity-50 z-50 hidden&quot;>
+        <div class=&quot;h-full max-w-md mx-auto bg-white flex flex-col&quot;>
+            <!-- WhatsApp Header -->
+            <div class=&quot;bg-whatsapp text-white px-4 py-3 flex items-center space-x-3&quot;>
+                <button onclick=&quot;closeWhatsApp()&quot; class=&quot;text-white hover:text-gray-200&quot;>
+                    <i class=&quot;fas fa-arrow-left&quot;></i>
+                </button>
+                <div class=&quot;flex items-center space-x-3&quot;>
+                    <div class=&quot;w-10 h-10 bg-white/20 rounded-full flex items-center justify-center&quot;>
+                        <span class=&quot;font-bold text-sm&quot; id=&quot;whatsappContactInitials&quot;>CM</span>
+                    </div>
+                    <div>
+                        <p class=&quot;font-medium&quot; id=&quot;whatsappContactName&quot;>Carlos Mendes</p>
+                        <p class=&quot;text-xs text-green-100&quot; id=&quot;whatsappContactRole&quot;>CTO • TechSolutions</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Chat Messages -->
+            <div class=&quot;flex-1 bg-gray-100 p-4 overflow-y-auto&quot; id=&quot;chatMessages&quot;>
+                <!-- Template selection first -->
+                <div class=&quot;mb-4 p-3 bg-blue-50 border border-blue-200 rounded-lg&quot;>
+                    <p class=&quot;text-sm font-medium text-blue-800 mb-2&quot;>💡 Escolha um template ou escreva sua mensagem:</p>
+                    <div class=&quot;space-y-2&quot;>
+                        <button onclick=&quot;selectTemplate('tech')&quot; class=&quot;w-full text-left p-2 bg-white rounded text-sm hover:bg-blue-50 transition-colors&quot;>
+                            &quot;Olá! Vi que vocês trabalham com desenvolvimento. Tenho uma solução que pode otimizar seus processos...&quot;
+                        </button>
+                        <button onclick=&quot;selectTemplate('custom')&quot; class=&quot;w-full text-left p-2 bg-white rounded text-sm hover:bg-blue-50 transition-colors&quot;>
+                            ✏️ Escrever mensagem personalizada
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Simulated sent message -->
+                <div class=&quot;flex justify-end mb-3&quot; style=&quot;display: none;&quot; id=&quot;sentMessage&quot;>
+                    <div class=&quot;chat-bubble sent p-3 rounded-lg&quot;>
+                        <p class=&quot;text-sm&quot; id=&quot;sentMessageText&quot;></p>
+                        <div class=&quot;flex items-center justify-end space-x-1 mt-1&quot;>
+                            <span class=&quot;text-xs text-gray-600&quot;>14:23</span>
+                            <i class=&quot;fas fa-check-double text-blue-500 text-xs&quot;></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Message Input -->
+            <div class=&quot;p-4 bg-white border-t border-gray-200&quot;>
+                <div class=&quot;flex items-center space-x-2&quot;>
+                    <input type=&quot;text&quot; id=&quot;messageInput&quot; placeholder=&quot;Digite sua mensagem...&quot; 
+                           class=&quot;flex-1 border border-gray-300 rounded-full px-4 py-2 text-sm focus:outline-none focus:border-whatsapp&quot;>
+                    <button onclick=&quot;sendMessage()&quot; class=&quot;bg-whatsapp text-white p-2 rounded-full hover:bg-whatsapp-dark transition-colors&quot;>
+                        <i class=&quot;fas fa-paper-plane&quot;></i>
+                    </button>
+                </div>
+                <!-- Simulated sending status -->
+                <div id=&quot;sendingStatus&quot; class=&quot;mt-2 text-center text-sm text-gray-500&quot; style=&quot;display: none;&quot;>
+                    <i class=&quot;fas fa-spinner animate-spin&quot;></i>
+                    <span class=&quot;ml-1&quot;>Enviando mensagem...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- @COMPONENT: BulkMessageModal [Bulk messaging modal] -->
+    <div id=&quot;bulkMessageModal&quot; class=&quot;fixed inset-0 bg-black bg-opacity-50 z-50 hidden&quot;>
+        <div class=&quot;h-full max-w-md mx-auto bg-white flex flex-col&quot;>
+            <!-- Header -->
+            <div class=&quot;bg-whatsapp text-white px-4 py-3 flex items-center space-x-3&quot;>
+                <button onclick=&quot;closeBulkMessage()&quot; class=&quot;text-white hover:text-gray-200&quot;>
+                    <i class=&quot;fas fa-arrow-left&quot;></i>
+                </button>
+                <div>
+                    <p class=&quot;font-medium&quot;>Envio em Massa</p>
+                    <p class=&quot;text-xs text-green-100&quot; id=&quot;bulkCount&quot;>3 contatos selecionados</p>
+                </div>
+            </div>
+            
+            <!-- Selected contacts preview -->
+            <div class=&quot;p-4 bg-gray-50 border-b border-gray-200&quot;>
+                <p class=&quot;text-sm font-medium text-gray-700 mb-2&quot;>Contatos selecionados:</p>
+                <div class=&quot;flex flex-wrap gap-2&quot; id=&quot;selectedContactsList&quot;>
+                    <span class=&quot;bg-whatsapp/10 text-whatsapp px-2 py-1 rounded-full text-xs&quot;>TechSolutions</span>
+                    <span class=&quot;bg-whatsapp/10 text-whatsapp px-2 py-1 rounded-full text-xs&quot;>Clínica Central</span>
+                    <span class=&quot;bg-whatsapp/10 text-whatsapp px-2 py-1 rounded-full text-xs&quot;>Sabor &amp; Arte</span>
+                </div>
+            </div>
+            
+            <!-- Template selection -->
+            <div class=&quot;flex-1 p-4 overflow-y-auto&quot;>
+                <p class=&quot;text-sm font-medium text-gray-700 mb-3&quot;>Escolha um template:</p>
+                <div class=&quot;space-y-3&quot;>
+                    <button onclick=&quot;selectBulkTemplate('general')&quot; class=&quot;w-full text-left p-3 bg-white border border-gray-200 rounded-lg hover:border-whatsapp transition-colors&quot;>
+                        <p class=&quot;text-sm font-medium text-gray-900&quot;>Template Geral</p>
+                        <p class=&quot;text-xs text-gray-600 mt-1&quot;>&quot;Olá! Sou [NOME] e tenho uma solução que pode interessar sua empresa...&quot;</p>
+                    </button>
+                    <button onclick=&quot;selectBulkTemplate('segmented')&quot; class=&quot;w-full text-left p-3 bg-white border border-gray-200 rounded-lg hover:border-whatsapp transition-colors&quot;>
+                        <p class=&quot;text-sm font-medium text-gray-900&quot;>Template Segmentado</p>
+                        <p class=&quot;text-xs text-gray-600 mt-1&quot;>Personalizado automaticamente por segmento</p>
+                    </button>
+                    <button onclick=&quot;selectBulkTemplate('custom')&quot; class=&quot;w-full text-left p-3 bg-white border border-gray-200 rounded-lg hover:border-whatsapp transition-colors&quot;>
+                        <p class=&quot;text-sm font-medium text-gray-900&quot;>Mensagem Personalizada</p>
+                        <p class=&quot;text-xs text-gray-600 mt-1&quot;>Escreva sua própria mensagem</p>
+                    </button>
+                </div>
+                
+                <!-- Custom message textarea (hidden by default) -->
+                <div id=&quot;customMessageArea&quot; class=&quot;mt-4 hidden&quot;>
+                    <label class=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Sua mensagem:</label>
+                    <textarea id=&quot;customBulkMessage&quot; rows=&quot;4&quot; class=&quot;w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-whatsapp&quot; placeholder=&quot;Digite sua mensagem personalizada...&quot;></textarea>
+                </div>
+            </div>
+            
+            <!-- Send button -->
+            <div class=&quot;p-4 bg-white border-t border-gray-200&quot;>
+                <button onclick=&quot;sendBulkMessage()&quot; class=&quot;w-full bg-whatsapp text-white py-3 rounded-lg font-medium hover:bg-whatsapp-dark transition-colors flex items-center justify-center space-x-2&quot;>
+                    <i class=&quot;fab fa-whatsapp&quot;></i>
+                    <span>Enviar para 3 contatos</span>
+                </button>
+                <p class=&quot;text-xs text-center text-gray-500 mt-2&quot;>Simulação de envio • Custo: 3 créditos</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- @COMPONENT: UpgradeModal [Premium upgrade modal] -->
+    <div id=&quot;upgradeModal&quot; class=&quot;fixed inset-0 bg-black bg-opacity-50 z-50 hidden&quot;>
+        <div class=&quot;h-full max-w-md mx-auto bg-white flex flex-col&quot;>
+            <!-- Header -->
+            <div class=&quot;bg-gradient-to-r from-amber-400 to-amber-500 text-white px-4 py-6 text-center&quot;>
+                <button onclick=&quot;closeUpgrade()&quot; class=&quot;absolute top-4 right-4 text-white hover:text-gray-200&quot;>
+                    <i class=&quot;fas fa-times&quot;></i>
+                </button>
+                <div class=&quot;w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3&quot;>
+                    <i class=&quot;fas fa-crown text-2xl&quot;></i>
+                </div>
+                <h2 class=&quot;text-xl font-bold&quot;>Desbloqueie Mais Oportunidades</h2>
+                <p class=&quot;text-sm text-amber-100 mt-1&quot;>Você está 80% perto do próximo nível!</p>
+            </div>
+            
+            <!-- Current status -->
+            <div class=&quot;p-4 bg-amber-50 border-b border-amber-200&quot;>
+                <div class=&quot;flex items-center justify-between mb-2&quot;>
+                    <span class=&quot;text-sm font-medium text-amber-800&quot;>Créditos restantes</span>
+                    <span class=&quot;text-sm font-bold text-amber-800&quot;>7/10</span>
+                </div>
+                <div class=&quot;w-full bg-amber-200 rounded-full h-2&quot;>
+                    <div class=&quot;bg-amber-500 h-2 rounded-full w-7/10&quot;></div>
+                </div>
+                <p class=&quot;text-xs text-amber-700 mt-2&quot;>⚡ Oferta expira em <span class=&quot;font-bold&quot;>23:45:12</span></p>
+            </div>
+            
+            <!-- Plans -->
+            <div class=&quot;flex-1 p-4 overflow-y-auto&quot;>
+                <div class=&quot;space-y-4&quot;>
+                    <!-- Quick credits -->
+                    <div class=&quot;border border-gray-200 rounded-lg p-4&quot;>
+                        <div class=&quot;flex justify-between items-center mb-2&quot;>
+                            <h3 class=&quot;font-bold text-gray-900&quot;>+50 Créditos</h3>
+                            <span class=&quot;text-lg font-bold text-conversion&quot;>R$ 9,90</span>
+                        </div>
+                        <p class=&quot;text-sm text-gray-600 mb-3&quot;>Desbloqueie 50 leads premium</p>
+                        <button onclick=&quot;purchaseCredits()&quot; class=&quot;w-full bg-conversion text-white py-2 rounded-lg font-medium text-sm hover:bg-conversion-dark transition-colors&quot;>
+                            Comprar Agora
+                        </button>
+                    </div>
+                    
+                    <!-- Professional plan -->
+                    <div class=&quot;border-2 border-whatsapp rounded-lg p-4 relative&quot;>
+                        <div class=&quot;absolute -top-2 left-4 bg-whatsapp text-white px-2 py-1 rounded text-xs font-bold&quot;>
+                            POPULAR
+                        </div>
+                        <div class=&quot;flex justify-between items-center mb-2&quot;>
+                            <h3 class=&quot;font-bold text-gray-900&quot;>Plano Professional</h3>
+                            <span class=&quot;text-lg font-bold text-whatsapp&quot;>R$ 47/mês</span>
+                        </div>
+                        <ul class=&quot;text-sm text-gray-600 space-y-1 mb-3&quot;>
+                            <li class=&quot;flex items-center space-x-2&quot;><i class=&quot;fas fa-check text-green-500&quot;></i><span>100 desbloqueios/mês</span></li>
+                            <li class=&quot;flex items-center space-x-2&quot;><i class=&quot;fas fa-check text-green-500&quot;></i><span>Analytics avançados</span></li>
+                            <li class=&quot;flex items-center space-x-2&quot;><i class=&quot;fas fa-check text-green-500&quot;></i><span>Templates premium</span></li>
+                        </ul>
+                        <button onclick=&quot;upgradeProfessional()&quot; class=&quot;w-full bg-whatsapp text-white py-2 rounded-lg font-medium text-sm hover:bg-whatsapp-dark transition-colors&quot;>
+                            Escolher Plano
+                        </button>
+                    </div>
+                    
+                    <!-- Enterprise plan -->
+                    <div class=&quot;border border-amber-300 rounded-lg p-4 bg-gradient-to-r from-amber-50 to-amber-100&quot;>
+                        <div class=&quot;flex justify-between items-center mb-2&quot;>
+                            <h3 class=&quot;font-bold text-gray-900 flex items-center space-x-1&quot;>
+                                <i class=&quot;fas fa-crown text-amber-500&quot;></i>
+                                <span>Enterprise</span>
+                            </h3>
+                            <span class=&quot;text-lg font-bold text-amber-600&quot;>R$ 97/mês</span>
+                        </div>
+                        <ul class=&quot;text-sm text-gray-600 space-y-1 mb-3&quot;>
+                            <li class=&quot;flex items-center space-x-2&quot;><i class=&quot;fas fa-check text-green-500&quot;></i><span>Desbloqueios ilimitados</span></li>
+                            <li class=&quot;flex items-center space-x-2&quot;><i class=&quot;fas fa-check text-green-500&quot;></i><span>IA avançada</span></li>
+                            <li class=&quot;flex items-center space-x-2&quot;><i class=&quot;fas fa-check text-green-500&quot;></i><span>White label</span></li>
+                        </ul>
+                        <button onclick=&quot;upgradeEnterprise()&quot; class=&quot;w-full bg-gradient-to-r from-amber-400 to-amber-500 text-white py-2 rounded-lg font-medium text-sm hover:from-amber-500 hover:to-amber-600 transition-all&quot;>
+                            Escolher Plano
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Social proof -->
+            <div class=&quot;p-4 bg-gray-50 border-t border-gray-200&quot;>
+                <p class=&quot;text-xs text-center text-gray-500&quot;>
+                    <i class=&quot;fas fa-users&quot;></i>
+                    847 empresários desbloquearam contatos hoje
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for interactions -->
+    <script>
+        (function() {
+            // Global state
+            let selectedLeads = new Set();
+            let isSelectionMode = false;
+            
+            // Hide welcome notification after 5 seconds
+            setTimeout(() => {
+                const welcome = document.getElementById('welcomeNotification');
+                if (welcome) {
+                    welcome.style.transform = 'translateY(-100%)';
+                    setTimeout(() => welcome.style.display = 'none', 300);
+                }
+            }, 5000);
+            
+            // Selection functionality
+            window.toggleSelection = function(checkbox, leadId) {
+                const card = checkbox.closest('.lead-card');
+                
+                if (checkbox.checked) {
+                    selectedLeads.add(leadId);
+                    card.classList.add('selected');
+                } else {
+                    selectedLeads.delete(leadId);
+                    card.classList.remove('selected');
+                }
+                
+                updateSelectionUI();
+            };
+            
+            function updateSelectionUI() {
+                const selectionBar = document.getElementById('selectionBar');
+                const countSpan = selectionBar.querySelector('[data-bind=&quot;selection.count&quot;]');
+                
+                if (selectedLeads.size > 0) {
+                    selectionBar.classList.remove('hidden');
+                    countSpan.textContent = `${selectedLeads.size} selecionados`;
+                    isSelectionMode = true;
+                } else {
+                    selectionBar.classList.add('hidden');
+                    isSelectionMode = false;
+                }
+            }
+            
+            window.clearSelection = function() {
+                selectedLeads.clear();
+                document.querySelectorAll('.selection-checkbox').forEach(cb => {
+                    cb.checked = false;
+                    cb.closest('.lead-card').classList.remove('selected');
+                });
+                updateSelectionUI();
+            };
+            
+            // WhatsApp functionality
+            window.openWhatsApp = function(leadId) {
+                const modal = document.getElementById('whatsappModal');
+                
+                // Set contact info based on lead
+                const contacts = {
+                    1: { name: 'Carlos Mendes', role: 'CTO • TechSolutions', initials: 'CM' },
+                    3: { name: 'Ana Maria Silva', role: 'Proprietária • Sabor &amp; Arte', initials: 'AM' }
+                };
+                
+                const contact = contacts[leadId];
+                if (contact) {
+                    document.getElementById('whatsappContactName').textContent = contact.name;
+                    document.getElementById('whatsappContactRole').textContent = contact.role;
+                    document.getElementById('whatsappContactInitials').textContent = contact.initials;
+                }
+                
+                modal.classList.remove('hidden');
+            };
+            
+            window.closeWhatsApp = function() {
+                document.getElementById('whatsappModal').classList.add('hidden');
+                document.getElementById('sentMessage').style.display = 'none';
+                document.getElementById('messageInput').value = '';
+            };
+            
+            window.selectTemplate = function(type) {
+                const templates = {
+                    tech: &quot;Olá! Vi que vocês trabalham com desenvolvimento. Tenho uma solução que pode otimizar seus processos em até 40%. Posso apresentar em 15 minutos?&quot;,
+                    custom: &quot;&quot;
+                };
+                
+                if (type === 'custom') {
+                    document.getElementById('messageInput').focus();
+                } else {
+                    document.getElementById('messageInput').value = templates[type];
+                }
+            };
+            
+            window.sendMessage = function() {
+                const input = document.getElementById('messageInput');
+                const message = input.value.trim();
+                
+                if (!message) return;
+                
+                // Show sending status
+                document.getElementById('sendingStatus').style.display = 'block';
+                
+                setTimeout(() => {
+                    // Hide sending status and show sent message
+                    document.getElementById('sendingStatus').style.display = 'none';
+                    document.getElementById('sentMessageText').textContent = message;
+                    document.getElementById('sentMessage').style.display = 'flex';
+                    input.value = '';
+                    
+                    // Simulate delivery
+                    setTimeout(() => {
+                        alert('✅ Mensagem simulada enviada com sucesso!\n\nNa versão real, esta mensagem seria enviada via WhatsApp Business API.');
+                    }, 1000);
+                }, 2000);
+            };
+            
+            // Bulk messaging
+            window.openBulkMessage = function() {
+                document.getElementById('bulkMessageModal').classList.remove('hidden');
+                document.getElementById('bulkCount').textContent = `${selectedLeads.size} contatos selecionados`;
+            };
+            
+            window.closeBulkMessage = function() {
+                document.getElementById('bulkMessageModal').classList.add('hidden');
+                document.getElementById('customMessageArea').classList.add('hidden');
+            };
+            
+            window.selectBulkTemplate = function(type) {
+                const customArea = document.getElementById('customMessageArea');
+                
+                if (type === 'custom') {
+                    customArea.classList.remove('hidden');
+                } else {
+                    customArea.classList.add('hidden');
+                }
+            };
+            
+            window.sendBulkMessage = function() {
+                alert(`✅ Simulação de envio em massa!\n\n${selectedLeads.size} mensagens seriam enviadas via WhatsApp.\n\nCusto: ${selectedLeads.size} créditos`);
+                closeBulkMessage();
+                clearSelection();
+            };
+            
+            // Unlock functionality
+            window.unlockLead = function(leadId) {
+                const currentCredits = 7;
+                if (currentCredits > 0) {
+                    alert('🔓 Lead desbloqueado com sucesso!\n\nContatos revelados:\n📧 contato@clinicacentral.com.br\n📱 (11) 99999-9999\n\nCréditos restantes: 6');
+                    // Here you would update the UI to show unlocked content
+                } else {
+                    document.getElementById('upgradeModal').classList.remove('hidden');
+                }
+            };
+            
+            // Upgrade functionality
+            window.upgradeToPremium = function() {
+                document.getElementById('upgradeModal').classList.remove('hidden');
+            };
+            
+            window.closeUpgrade = function() {
+                document.getElementById('upgradeModal').classList.add('hidden');
+            };
+            
+            window.purchaseCredits = function() {
+                alert('🚀 Redirecionando para pagamento...\n\n+50 créditos por R$ 9,90');
+            };
+            
+            window.upgradeProfessional = function() {
+                alert('⭐ Redirecionando para assinatura Professional...\n\n100 desbloqueios/mês por R$ 47');
+            };
+            
+            window.upgradeEnterprise = function() {
+                alert('👑 Redirecionando para assinatura Enterprise...\n\nDesbloqueios ilimitados por R$ 97');
+            };
+            
+            // Filter functionality
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active state from all filters
+                    document.querySelectorAll('.filter-btn').forEach(b => {
+                        b.classList.remove('bg-whatsapp', 'text-white');
+                        b.classList.add('bg-gray-100', 'text-gray-600');
+                    });
+                    
+                    // Add active state to clicked filter
+                    this.classList.remove('bg-gray-100', 'text-gray-600');
+                    this.classList.add('bg-whatsapp', 'text-white');
+                    
+                    const filter = this.dataset.filter;
+                    alert(`Filtro aplicado: ${filter}\n\nNa versão real, isso filtraria os leads do banco de dados.`);
+                });
+            });
+            
+            // Search functionality
+            window.handleSearch = function(query) {
+                if (query.length > 2) {
+                    console.log('Searching for:', query);
+                    // Here you would implement real search against your database
+                }
+            };
+            
+            // Favorite functionality
+            window.toggleFavorite = function(leadId) {
+                const button = event.target.closest('button');
+                const icon = button.querySelector('i');
+                
+                if (icon.classList.contains('fas')) {
+                    icon.classList.remove('fas');
+                    icon.classList.add('far');
+                    button.classList.remove('text-yellow-500');
+                    button.classList.add('text-gray-400');
+                } else {
+                    icon.classList.remove('far');
+                    icon.classList.add('fas');
+                    button.classList.remove('text-gray-400');
+                    button.classList.add('text-yellow-500');
+                }
+            };
+            
+            // Bottom navigation
+            window.showConversations = function() {
+                alert('📱 Conversas\n\nNa versão real, mostraria todas as conversas ativas do WhatsApp.');
+            };
+            
+            window.showFavorites = function() {
+                alert('⭐ Favoritos\n\nNa versão real, mostraria todos os leads favoritados.');
+            };
+            
+            window.showAnalytics = function() {
+                alert('📊 Analytics\n\nNa versão real, mostraria:\n• Taxa de conversão\n• ROI por campanha\n• Melhores horários\n• Performance detalhada');
+            };
+            
+            window.showProfile = function() {
+                alert('👤 Perfil\n\nNa versão real, mostraria:\n• Dados do usuário\n• Configurações\n• Histórico de uso\n• Suporte');
+            };
+            
+            // Email functionality
+            window.openEmail = function(leadId) {
+                alert('📧 Abrindo composição de email...\n\nNa versão real, abriria o Gmail integrado ou cliente de email padrão.');
+            };
+            
+            // Long press for selection on mobile
+            let longPressTimer;
+            const leadCards = document.querySelectorAll('.lead-card');
+            
+            leadCards.forEach(card => {
+                card.addEventListener('touchstart', function(e) {
+                    longPressTimer = setTimeout(() => {
+                        const checkbox = this.querySelector('.selection-checkbox');
+                        checkbox.checked = !checkbox.checked;
+                        checkbox.dispatchEvent(new Event('change'));
+                    }, 500);
+                });
+                
+                card.addEventListener('touchend', function() {
+                    clearTimeout(longPressTimer);
+                });
+                
+                card.addEventListener('touchmove', function() {
+                    clearTimeout(longPressTimer);
+                });
+            });
+            
+            // Handle lead click
+            window.handleLeadClick = function(leadId) {
+                if (isSelectionMode) {
+                    const checkbox = document.querySelector(`[data-lead-id=&quot;${leadId}&quot;] .selection-checkbox`);
+                    checkbox.checked = !checkbox.checked;
+                    checkbox.dispatchEvent(new Event('change'));
+                } else {
+                    // Show lead details or open conversation
+                    const lead = document.querySelector(`[data-lead-id=&quot;${leadId}&quot;]`);
+                    if (lead.dataset.unlocked === 'true') {
+                        openWhatsApp(leadId);
+                    } else {
+                        unlockLead(leadId);
+                    }
+                }
+            };
+            
+        })();
+    </script>
+</body>
+</html>" src="https://6cd9395e-0579-4ea6-a9e7-6b2246f370a5-00-254tz2b9460km.janeway.replit.dev:5904/"></iframe></div></div>

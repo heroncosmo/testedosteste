@@ -1,0 +1,670 @@
+<div class=" useView_view__C2mnv" style="--useView--grow: 1;"><iframe title="visual-preview" sandbox="allow-same-origin allow-presentation allow-pointer-lock allow-scripts" allow="accelerometer; ambient-light-sensor; autoplay; battery; camera; display-capture; encrypted-media; execution-while-not-rendered; execution-while-out-of-viewport; fullscreen; gamepad; geolocation; gyroscope; layout-animations; legacy-image-formats; magnetometer; microphone; midi; navigation-override; oversized-images; payment; picture-in-picture; publickey-credentials; speaker-selection; sync-xhr; unoptimized-images; unsized-media; usb; screen-wake-lock; web-share; xr-spatial-tracking; clipboard-read; clipboard-write; pointer-lock" class="AgentHtmlPreviewFromDisk_iframe___vd38" srcdoc="<!DOCTYPE html>
+<html lang=&quot;pt-BR&quot;>
+<head>
+    <meta charset=&quot;UTF-8&quot;>
+    <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+    <title>Lead Pilot - Networking Empresarial</title>
+    <script src=&quot;https://cdn.tailwindcss.com&quot;></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    'whatsapp': '#25D366',
+                    'whatsapp-dark': '#128C7E',
+                    'conversion': '#FF6B35',
+                    'conversion-dark': '#E55A2B',
+                    'action-blue': '#3B82F6',
+                    'action-blue-dark': '#1E40AF'
+                },
+                fontFamily: {
+                    'sans': ['Inter', 'system-ui', 'sans-serif']
+                },
+                animation: {
+                    'slide-up': 'slideUp 0.3s ease-out',
+                    'fade-in': 'fadeIn 0.5s ease-out',
+                    'pulse-slow': 'pulse 3s infinite',
+                    'bounce-gentle': 'bounceGentle 2s infinite',
+                    'wiggle': 'wiggle 1s ease-in-out infinite'
+                },
+                keyframes: {
+                    slideUp: {
+                        '0%': { transform: 'translateY(100%)' },
+                        '100%': { transform: 'translateY(0)' }
+                    },
+                    fadeIn: {
+                        '0%': { opacity: '0', transform: 'translateY(20px)' },
+                        '100%': { opacity: '1', transform: 'translateY(0)' }
+                    },
+                    bounceGentle: {
+                        '0%, 100%': { transform: 'translateY(0)' },
+                        '50%': { transform: 'translateY(-5px)' }
+                    },
+                    wiggle: {
+                        '0%, 100%': { transform: 'rotate(-3deg)' },
+                        '50%': { transform: 'rotate(3deg)' }
+                    }
+                }
+            }
+        }
+    };
+    </script>
+    <link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css&quot;>
+<style>body { pointer-events: none; }</style></head>
+
+<body class=&quot;bg-gray-50 font-sans overflow-x-hidden&quot;>
+    <!-- @COMPONENT: MobileApp [Main container with zero friction design] -->
+    <div class=&quot;min-h-screen flex flex-col max-w-md mx-auto bg-white shadow-xl relative&quot;>
+        
+        <!-- @COMPONENT: WelcomeNotification [Auto-hide welcome message] -->
+        <div id=&quot;welcomeNotification&quot; class=&quot;absolute top-0 left-0 right-0 bg-whatsapp text-white px-4 py-3 z-50 animate-slide-up&quot;>
+            <div class=&quot;flex items-center justify-between&quot;>
+                <div class=&quot;flex items-center space-x-2&quot;>
+                    <i class=&quot;fas fa-rocket animate-bounce-gentle&quot;></i>
+                    <span class=&quot;text-sm font-medium&quot;>Bem-vindo! Encontramos 1.247 oportunidades para você</span>
+                </div>
+                <button onclick=&quot;hideWelcome()&quot; class=&quot;text-white/80 hover:text-white&quot;>
+                    <i class=&quot;fas fa-times&quot;></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- @COMPONENT: TopStatusBar [Credits and notifications] -->
+        <div class=&quot;bg-whatsapp text-white px-4 py-3 flex justify-between items-center sticky top-0 z-40&quot;>
+            <div class=&quot;flex items-center space-x-3&quot;>
+                <div class=&quot;w-8 h-8 bg-white rounded-lg flex items-center justify-center&quot;>
+                    <i class=&quot;fas fa-rocket text-whatsapp text-sm&quot;></i>
+                </div>
+                <span class=&quot;font-bold text-lg&quot;>Lead Pilot</span>
+            </div>
+            <div class=&quot;flex items-center space-x-3&quot;>
+                <!-- Credits with progress bar -->
+                <div class=&quot;flex flex-col items-end&quot;>
+                    <div class=&quot;bg-white/20 px-3 py-1 rounded-full text-xs font-medium flex items-center space-x-1&quot;>
+                        <i class=&quot;fas fa-coins text-yellow-300&quot;></i>
+                        <span data-bind=&quot;user.creditsRemaining&quot;>7</span>
+                        <span>créditos</span>
+                    </div>
+                    <div class=&quot;w-16 h-1 bg-white/20 rounded-full mt-1&quot;>
+                        <div class=&quot;w-7/10 h-full bg-yellow-300 rounded-full&quot;></div>
+                    </div>
+                </div>
+                <!-- Notification with badge -->
+                <div class=&quot;relative&quot;>
+                    <i class=&quot;fas fa-bell text-lg&quot;></i>
+                    <span class=&quot;absolute -top-1 -right-1 bg-conversion w-3 h-3 rounded-full text-xs flex items-center justify-center font-bold animate-pulse&quot;>3</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- @COMPONENT: SearchAndFilters [Quick search with smart suggestions] -->
+        <div class=&quot;p-4 bg-white sticky top-16 z-30 border-b border-gray-100&quot;>
+            <div class=&quot;relative mb-3&quot;>
+                <i class=&quot;fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400&quot;></i>
+                <input type=&quot;text&quot; placeholder=&quot;Buscar empresas, segmentos...&quot; 
+                       class=&quot;w-full pl-10 pr-4 py-3 bg-gray-50 rounded-2xl border-0 focus:bg-white focus:ring-2 focus:ring-whatsapp/20 transition-all text-sm&quot;
+                       data-bind=&quot;search.query&quot;
+                       onkeyup=&quot;handleSearch(this.value)&quot;>
+            </div>
+            
+            <!-- Quick filters -->
+            <div class=&quot;flex space-x-2 overflow-x-auto pb-1 scrollbar-hide&quot;>
+                <button class=&quot;flex-shrink-0 bg-whatsapp text-white px-4 py-2 rounded-full text-xs font-medium flex items-center space-x-1&quot;>
+                    <i class=&quot;fas fa-fire&quot;></i>
+                    <span>Quentes</span>
+                    <span class=&quot;bg-white/20 px-1.5 py-0.5 rounded-full text-xs&quot;>247</span>
+                </button>
+                <button class=&quot;flex-shrink-0 bg-gray-100 text-gray-600 px-4 py-2 rounded-full text-xs font-medium flex items-center space-x-1 hover:bg-gray-200 transition-colors&quot;>
+                    <i class=&quot;fas fa-utensils&quot;></i>
+                    <span>Restaurantes</span>
+                </button>
+                <button class=&quot;flex-shrink-0 bg-gray-100 text-gray-600 px-4 py-2 rounded-full text-xs font-medium flex items-center space-x-1 hover:bg-gray-200 transition-colors&quot;>
+                    <i class=&quot;fas fa-stethoscope&quot;></i>
+                    <span>Clínicas</span>
+                </button>
+                <button class=&quot;flex-shrink-0 bg-gray-100 text-gray-600 px-4 py-2 rounded-full text-xs font-medium flex items-center space-x-1 hover:bg-gray-200 transition-colors&quot;>
+                    <i class=&quot;fas fa-laptop-code&quot;></i>
+                    <span>Tech</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- @COMPONENT: BulkSelectionBar [Shows when multiple leads selected] -->
+        <div id=&quot;selectionBar&quot; class=&quot;bg-whatsapp text-white px-4 py-3 flex justify-between items-center hidden animate-slide-up sticky top-32 z-30&quot;>
+            <div class=&quot;flex items-center space-x-3&quot;>
+                <button onclick=&quot;clearSelection()&quot; class=&quot;p-1 hover:bg-white/20 rounded-full transition-colors&quot;>
+                    <i class=&quot;fas fa-times&quot;></i>
+                </button>
+                <span class=&quot;font-medium&quot; data-bind=&quot;selection.count&quot;>3 selecionados</span>
+            </div>
+            <div class=&quot;flex space-x-3&quot;>
+                <button onclick=&quot;openBulkMessage()&quot; class=&quot;flex items-center space-x-2 bg-white/20 px-4 py-2 rounded-lg hover:bg-white/30 transition-colors&quot;>
+                    <i class=&quot;fab fa-whatsapp&quot;></i>
+                    <span class=&quot;text-sm font-medium&quot;>Enviar WhatsApp</span>
+                </button>
+                <button onclick=&quot;bulkFavorite()&quot; class=&quot;p-2 hover:bg-white/20 rounded-full transition-colors&quot;>
+                    <i class=&quot;fas fa-star&quot;></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- @COMPONENT: InfiniteFeed [Main scrollable feed area] -->
+        <div class=&quot;flex-1 overflow-y-auto pb-20&quot; id=&quot;leadsFeed&quot;>
+            
+            <!-- @MAP: leads.map(lead => ( -->
+            <!-- Premium Lead Card 1 -->
+            <div class=&quot;bg-white border-b border-gray-50 p-4 relative hover:bg-gray-25 transition-colors&quot; data-lead-id=&quot;1&quot; onclick=&quot;handleLeadClick(1)&quot;>
+                <div class=&quot;flex items-start space-x-3&quot;>
+                    <!-- Checkbox and Avatar -->
+                    <div class=&quot;relative&quot;>
+                        <input type=&quot;checkbox&quot; class=&quot;absolute top-0 left-0 w-5 h-5 opacity-0 z-10 cursor-pointer&quot; 
+                               onchange=&quot;toggleSelection(this, 1)&quot; onclick=&quot;event.stopPropagation()&quot;>
+                        <div class=&quot;w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center font-bold text-lg text-white selection-overlay&quot;>
+                            TC
+                        </div>
+                        <!-- Premium badge -->
+                        <div class=&quot;absolute -top-1 -right-1 bg-gradient-to-r from-amber-400 to-amber-500 w-5 h-5 rounded-full text-white text-xs flex items-center justify-center font-bold&quot;>
+                            ⭐
+                        </div>
+                    </div>
+                    
+                    <!-- Lead Content -->
+                    <div class=&quot;flex-1 min-w-0&quot;>
+                        <div class=&quot;flex justify-between items-start mb-2&quot;>
+                            <div>
+                                <h3 class=&quot;font-bold text-gray-900 truncate text-base&quot; data-bind=&quot;lead.company&quot;>TechSolutions LTDA</h3>
+                                <p class=&quot;text-sm text-gray-600&quot;>Desenvolvimento de Software</p>
+                            </div>
+                            <div class=&quot;flex flex-col items-end space-y-1&quot;>
+                                <span class=&quot;bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-bold&quot;>95% Match</span>
+                                <button onclick=&quot;toggleFavorite(1); event.stopPropagation();&quot; class=&quot;text-gray-400 hover:text-yellow-500 transition-colors&quot;>
+                                    <i class=&quot;fas fa-star&quot;></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Location and AI Insights -->
+                        <div class=&quot;flex items-center justify-between text-xs text-gray-500 mb-3&quot;>
+                            <div class=&quot;flex items-center space-x-2&quot;>
+                                <i class=&quot;fas fa-map-marker-alt&quot;></i>
+                                <span>São Paulo, SP</span>
+                                <span>•</span>
+                                <span>50-100 funcionários</span>
+                            </div>
+                        </div>
+                        
+                        <!-- AI Insights -->
+                        <div class=&quot;bg-blue-50 border border-blue-100 rounded-lg p-3 mb-3&quot;>
+                            <div class=&quot;flex items-center space-x-2 mb-1&quot;>
+                                <i class=&quot;fas fa-brain text-blue-600 text-sm&quot;></i>
+                                <span class=&quot;text-xs font-medium text-blue-700&quot;>IA Insights</span>
+                            </div>
+                            <p class=&quot;text-xs text-blue-600&quot;>Alta probabilidade de conversão • Melhor horário: 14h-16h • Segmento em crescimento +23%</p>
+                        </div>
+                        
+                        <!-- Contact Person -->
+                        <div class=&quot;flex items-center space-x-2 mb-3 text-sm&quot;>
+                            <div class=&quot;w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center text-xs font-medium&quot;>CM</div>
+                            <span class=&quot;text-gray-700 font-medium&quot;>Carlos Mendes</span>
+                            <span class=&quot;text-gray-500&quot;>• CTO</span>
+                        </div>
+                        
+                        <!-- Action Buttons -->
+                        <div class=&quot;flex items-center space-x-2&quot;>
+                            <button onclick=&quot;openLeadChat(1); event.stopPropagation();&quot; 
+                                    class=&quot;flex-1 bg-whatsapp text-white py-2.5 px-4 rounded-xl text-sm font-medium flex items-center justify-center space-x-2 hover:bg-whatsapp-dark transition-colors&quot;>
+                                <i class=&quot;fab fa-whatsapp&quot;></i>
+                                <span>WhatsApp</span>
+                            </button>
+                            <button onclick=&quot;sendEmail(1); event.stopPropagation();&quot; 
+                                    class=&quot;flex-1 bg-action-blue text-white py-2.5 px-4 rounded-xl text-sm font-medium flex items-center justify-center space-x-2 hover:bg-action-blue-dark transition-colors&quot;>
+                                <i class=&quot;fas fa-envelope&quot;></i>
+                                <span>Email</span>
+                            </button>
+                            <button onclick=&quot;showLeadDetails(1); event.stopPropagation();&quot; 
+                                    class=&quot;bg-gray-100 text-gray-600 py-2.5 px-3 rounded-xl text-sm font-medium hover:bg-gray-200 transition-colors&quot;>
+                                <i class=&quot;fas fa-eye&quot;></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Locked Lead Card 2 -->
+            <div class=&quot;bg-white border-b border-gray-50 p-4 relative&quot; data-lead-id=&quot;2&quot;>
+                <div class=&quot;flex items-start space-x-3&quot;>
+                    <div class=&quot;relative&quot;>
+                        <div class=&quot;w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center font-bold text-lg text-white blur-sm&quot;>
+                            CM
+                        </div>
+                        <div class=&quot;absolute inset-0 flex items-center justify-center&quot;>
+                            <i class=&quot;fas fa-lock text-gray-600 text-lg&quot;></i>
+                        </div>
+                    </div>
+                    
+                    <div class=&quot;flex-1 min-w-0&quot;>
+                        <div class=&quot;flex justify-between items-start mb-2&quot;>
+                            <div>
+                                <h3 class=&quot;font-bold text-gray-900 text-base&quot;>Clínica Médica Central</h3>
+                                <p class=&quot;text-sm text-gray-600 filter blur-sm&quot;>Clínica Médica • •••••••••</p>
+                            </div>
+                            <span class=&quot;bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full font-bold&quot;>92% Match</span>
+                        </div>
+                        
+                        <div class=&quot;flex items-center justify-between text-xs text-gray-500 mb-3&quot;>
+                            <span class=&quot;filter blur-sm&quot;>•••••••••, SP</span>
+                            <span>Bloqueado</span>
+                        </div>
+                        
+                        <!-- Social proof -->
+                        <div class=&quot;bg-orange-50 border border-orange-100 rounded-lg p-3 mb-3&quot;>
+                            <div class=&quot;flex items-center space-x-2 mb-1&quot;>
+                                <i class=&quot;fas fa-fire text-orange-500&quot;></i>
+                                <span class=&quot;text-xs font-medium text-orange-700&quot;>Alta demanda</span>
+                            </div>
+                            <p class=&quot;text-xs text-orange-600&quot;>12 usuários visualizaram nas últimas 24h. <strong>87% de taxa de resposta</strong> neste segmento.</p>
+                        </div>
+                        
+                        <button onclick=&quot;showUpgradeModal()&quot; 
+                                class=&quot;w-full bg-conversion text-white py-3 px-4 rounded-xl text-sm font-bold flex items-center justify-center space-x-2 hover:bg-conversion-dark transition-colors animate-pulse&quot;>
+                            <i class=&quot;fas fa-unlock&quot;></i>
+                            <span>Desbloquear por 1 Crédito</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Regular Lead Card 3 -->
+            <div class=&quot;bg-white border-b border-gray-50 p-4 relative hover:bg-gray-25 transition-colors&quot; data-lead-id=&quot;3&quot; onclick=&quot;handleLeadClick(3)&quot;>
+                <div class=&quot;flex items-start space-x-3&quot;>
+                    <div class=&quot;relative&quot;>
+                        <input type=&quot;checkbox&quot; class=&quot;absolute top-0 left-0 w-5 h-5 opacity-0 z-10 cursor-pointer&quot; 
+                               onchange=&quot;toggleSelection(this, 3)&quot; onclick=&quot;event.stopPropagation()&quot;>
+                        <div class=&quot;w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center font-bold text-lg text-white selection-overlay&quot;>
+                            BR
+                        </div>
+                        <!-- Hot badge -->
+                        <div class=&quot;absolute -top-1 -right-1 bg-red-500 w-5 h-5 rounded-full text-white text-xs flex items-center justify-center animate-pulse&quot;>
+                            🔥
+                        </div>
+                    </div>
+                    
+                    <div class=&quot;flex-1 min-w-0&quot;>
+                        <div class=&quot;flex justify-between items-start mb-2&quot;>
+                            <div>
+                                <h3 class=&quot;font-bold text-gray-900 truncate text-base&quot;>Bella Roma Ristorante</h3>
+                                <p class=&quot;text-sm text-gray-600&quot;>Restaurante Italiano</p>
+                            </div>
+                            <div class=&quot;flex flex-col items-end space-y-1&quot;>
+                                <span class=&quot;bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full font-bold&quot;>89% Match</span>
+                                <button onclick=&quot;toggleFavorite(3); event.stopPropagation();&quot; class=&quot;text-gray-400 hover:text-yellow-500 transition-colors&quot;>
+                                    <i class=&quot;far fa-star&quot;></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class=&quot;flex items-center justify-between text-xs text-gray-500 mb-3&quot;>
+                            <div class=&quot;flex items-center space-x-2&quot;>
+                                <i class=&quot;fas fa-map-marker-alt&quot;></i>
+                                <span>Vila Madalena, SP</span>
+                                <span>•</span>
+                                <span>10-25 funcionários</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Last contact info -->
+                        <div class=&quot;flex items-center space-x-2 mb-3 text-xs&quot;>
+                            <div class=&quot;flex items-center space-x-1 text-green-600&quot;>
+                                <i class=&quot;fas fa-check-double&quot;></i>
+                                <span>Última mensagem entregue</span>
+                            </div>
+                            <span class=&quot;text-gray-500&quot;>• 2 dias atrás</span>
+                        </div>
+                        
+                        <div class=&quot;flex items-center space-x-2&quot;>
+                            <button onclick=&quot;openLeadChat(3); event.stopPropagation();&quot; 
+                                    class=&quot;flex-1 bg-whatsapp text-white py-2.5 px-4 rounded-xl text-sm font-medium flex items-center justify-center space-x-2 hover:bg-whatsapp-dark transition-colors&quot;>
+                                <i class=&quot;fab fa-whatsapp&quot;></i>
+                                <span>Continuar Conversa</span>
+                            </button>
+                            <button onclick=&quot;showLeadDetails(3); event.stopPropagation();&quot; 
+                                    class=&quot;bg-gray-100 text-gray-600 py-2.5 px-3 rounded-xl text-sm font-medium hover:bg-gray-200 transition-colors&quot;>
+                                <i class=&quot;fas fa-eye&quot;></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load more indicator -->
+            <div class=&quot;p-6 text-center&quot;>
+                <div class=&quot;animate-spin rounded-full h-8 w-8 border-b-2 border-whatsapp mx-auto mb-3&quot;></div>
+                <p class=&quot;text-sm text-gray-500&quot;>Carregando mais oportunidades...</p>
+            </div>
+            <!-- @END_MAP )) -->
+            
+        </div>
+
+        <!-- @COMPONENT: BottomNavigation [Fixed navigation like Facebook] -->
+        <div class=&quot;fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-md bg-white border-t border-gray-200 px-4 py-2&quot;>
+            <div class=&quot;flex justify-around items-center&quot;>
+                <button class=&quot;flex flex-col items-center space-y-1 py-2 px-3 text-whatsapp&quot; onclick=&quot;navigateToFeed()&quot;>
+                    <i class=&quot;fas fa-home text-lg&quot;></i>
+                    <span class=&quot;text-xs font-medium&quot;>Feed</span>
+                </button>
+                <button class=&quot;flex flex-col items-center space-y-1 py-2 px-3 text-gray-400 relative&quot; onclick=&quot;navigateToChat()&quot;>
+                    <i class=&quot;fas fa-comments text-lg&quot;></i>
+                    <span class=&quot;text-xs&quot;>Conversas</span>
+                    <span class=&quot;absolute -top-1 right-2 bg-conversion w-4 h-4 rounded-full text-white text-xs flex items-center justify-center font-bold&quot;>5</span>
+                </button>
+                <button class=&quot;flex flex-col items-center space-y-1 py-2 px-3 text-gray-400&quot; onclick=&quot;navigateToFavorites()&quot;>
+                    <i class=&quot;fas fa-star text-lg&quot;></i>
+                    <span class=&quot;text-xs&quot;>Favoritos</span>
+                </button>
+                <button class=&quot;flex flex-col items-center space-y-1 py-2 px-3 text-gray-400&quot; onclick=&quot;navigateToAnalytics()&quot;>
+                    <i class=&quot;fas fa-chart-line text-lg&quot;></i>
+                    <span class=&quot;text-xs&quot;>Analytics</span>
+                </button>
+                <button class=&quot;flex flex-col items-center space-y-1 py-2 px-3 text-gray-400&quot; onclick=&quot;navigateToProfile()&quot;>
+                    <i class=&quot;fas fa-user text-lg&quot;></i>
+                    <span class=&quot;text-xs&quot;>Perfil</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- @COMPONENT: ChatModal [WhatsApp-like chat interface] -->
+        <div id=&quot;chatModal&quot; class=&quot;fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300&quot;>
+            <div class=&quot;flex flex-col h-full&quot;>
+                <!-- Chat header -->
+                <div class=&quot;bg-whatsapp text-white px-4 py-3 flex items-center space-x-3&quot;>
+                    <button onclick=&quot;closeChatModal()&quot; class=&quot;text-white&quot;>
+                        <i class=&quot;fas fa-arrow-left&quot;></i>
+                    </button>
+                    <div class=&quot;w-10 h-10 bg-white/20 rounded-full flex items-center justify-center font-bold&quot;>
+                        TC
+                    </div>
+                    <div class=&quot;flex-1&quot;>
+                        <h3 class=&quot;font-semibold&quot; data-bind=&quot;chat.companyName&quot;>TechSolutions LTDA</h3>
+                        <p class=&quot;text-xs text-white/80&quot;>Online agora</p>
+                    </div>
+                    <button class=&quot;text-white&quot;>
+                        <i class=&quot;fas fa-phone&quot;></i>
+                    </button>
+                </div>
+                
+                <!-- Chat messages -->
+                <div class=&quot;flex-1 overflow-y-auto p-4 space-y-3&quot; style=&quot;background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><pattern id=%22grain%22 width=%22100%22 height=%22100%22 patternUnits=%22userSpaceOnUse%22><circle cx=%2250%22 cy=%2250%22 r=%220.5%22 fill=%22%23000%22 opacity=%220.03%22/></pattern></defs><rect width=%22100%22 height=%22100%22 fill=%22url(%23grain)%22/></svg>');&quot;>
+                    <!-- Automated message -->
+                    <div class=&quot;flex justify-end&quot;>
+                        <div class=&quot;bg-whatsapp text-white rounded-2xl rounded-tr-sm px-4 py-2 max-w-xs&quot;>
+                            <p class=&quot;text-sm&quot;>Olá! Vi que vocês trabalham com desenvolvimento de software. Tenho uma solução que pode aumentar a produtividade da sua equipe em 40%. Posso apresentar?</p>
+                            <div class=&quot;flex items-center justify-end space-x-1 mt-1&quot;>
+                                <span class=&quot;text-xs text-white/70&quot;>14:23</span>
+                                <i class=&quot;fas fa-check-double text-xs text-blue-200&quot;></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Message input -->
+                <div class=&quot;p-4 border-t border-gray-200&quot;>
+                    <div class=&quot;flex items-center space-x-3&quot;>
+                        <button class=&quot;text-gray-400&quot;>
+                            <i class=&quot;fas fa-plus-circle text-xl&quot;></i>
+                        </button>
+                        <div class=&quot;flex-1 bg-gray-100 rounded-2xl px-4 py-2 flex items-center space-x-2&quot;>
+                            <input type=&quot;text&quot; placeholder=&quot;Digite uma mensagem...&quot; class=&quot;flex-1 bg-transparent border-0 outline-none text-sm&quot;>
+                            <button class=&quot;text-gray-400&quot;>
+                                <i class=&quot;fas fa-smile&quot;></i>
+                            </button>
+                        </div>
+                        <button class=&quot;bg-whatsapp text-white w-10 h-10 rounded-full flex items-center justify-center&quot;>
+                            <i class=&quot;fas fa-paper-plane&quot;></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- @COMPONENT: UpgradeModal [Contextual upgrade prompts] -->
+        <div id=&quot;upgradeModal&quot; class=&quot;fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 hidden&quot;>
+            <div class=&quot;bg-white rounded-2xl p-6 max-w-sm w-full animate-fade-in&quot;>
+                <div class=&quot;text-center mb-6&quot;>
+                    <div class=&quot;w-16 h-16 bg-gradient-to-br from-conversion to-conversion-dark rounded-full flex items-center justify-center mx-auto mb-4&quot;>
+                        <i class=&quot;fas fa-unlock text-white text-2xl&quot;></i>
+                    </div>
+                    <h3 class=&quot;text-xl font-bold text-gray-900 mb-2&quot;>Desbloqueie Este Lead Premium</h3>
+                    <p class=&quot;text-gray-600 text-sm&quot;>Potencial de <strong>R$ 100k+</strong> em vendas</p>
+                </div>
+                
+                <!-- Offer timer -->
+                <div class=&quot;bg-red-50 border border-red-200 rounded-lg p-3 mb-4&quot;>
+                    <div class=&quot;flex items-center justify-center space-x-2 text-red-700&quot;>
+                        <i class=&quot;fas fa-clock animate-wiggle&quot;></i>
+                        <span class=&quot;text-sm font-medium&quot;>Oferta expira em</span>
+                        <span class=&quot;font-bold&quot; id=&quot;offerTimer&quot;>23:45:12</span>
+                    </div>
+                </div>
+                
+                <div class=&quot;space-y-3 mb-6&quot;>
+                    <button onclick=&quot;unlockWithCredit()&quot; class=&quot;w-full bg-conversion text-white py-3 px-4 rounded-xl font-semibold flex items-center justify-center space-x-2&quot;>
+                        <i class=&quot;fas fa-coins&quot;></i>
+                        <span>Usar 1 Crédito (Grátis)</span>
+                    </button>
+                    <button onclick=&quot;upgradeToPromo()&quot; class=&quot;w-full bg-whatsapp text-white py-3 px-4 rounded-xl font-semibold&quot;>
+                        Upgrade para Desbloqueios Ilimitados - R$ 9,90
+                    </button>
+                </div>
+                
+                <button onclick=&quot;closeUpgradeModal()&quot; class=&quot;w-full text-gray-500 text-sm&quot;>
+                    Talvez depois
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- @COMPONENT: JavaScript [App functionality and interactions] -->
+    <script>
+    (function() {
+        'use strict';
+        
+        let selectedLeads = new Set();
+        let isSelectionMode = false;
+
+        // Auto-hide welcome notification
+        setTimeout(() => {
+            hideWelcome();
+        }, 5000);
+
+        // Simulate offer timer
+        let timeLeft = 23 * 3600 + 45 * 60 + 12; // 23:45:12
+        setInterval(() => {
+            if (timeLeft > 0) {
+                timeLeft--;
+                const hours = Math.floor(timeLeft / 3600);
+                const minutes = Math.floor((timeLeft % 3600) / 60);
+                const seconds = timeLeft % 60;
+                const timerElement = document.getElementById('offerTimer');
+                if (timerElement) {
+                    timerElement.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                }
+            }
+        }, 1000);
+
+        // Global functions
+        window.hideWelcome = function() {
+            const notification = document.getElementById('welcomeNotification');
+            if (notification) {
+                notification.style.transform = 'translateY(-100%)';
+                setTimeout(() => notification.remove(), 300);
+            }
+        };
+
+        window.handleSearch = function(query) {
+            console.log('Searching for:', query);
+            // Simulate search functionality
+        };
+
+        window.toggleSelection = function(checkbox, leadId) {
+            if (checkbox.checked) {
+                selectedLeads.add(leadId);
+            } else {
+                selectedLeads.delete(leadId);
+            }
+            
+            updateSelectionUI();
+        };
+
+        window.clearSelection = function() {
+            selectedLeads.clear();
+            document.querySelectorAll('input[type=&quot;checkbox&quot;]').forEach(cb => cb.checked = false);
+            updateSelectionUI();
+        };
+
+        function updateSelectionUI() {
+            const selectionBar = document.getElementById('selectionBar');
+            const countElement = selectionBar.querySelector('[data-bind=&quot;selection.count&quot;]');
+            
+            if (selectedLeads.size > 0) {
+                selectionBar.classList.remove('hidden');
+                countElement.textContent = `${selectedLeads.size} selecionados`;
+                isSelectionMode = true;
+            } else {
+                selectionBar.classList.add('hidden');
+                isSelectionMode = false;
+            }
+        }
+
+        window.openBulkMessage = function() {
+            console.log('Opening bulk message for leads:', Array.from(selectedLeads));
+            // Simulate bulk messaging
+            alert(`Enviando mensagem para ${selectedLeads.size} leads...`);
+        };
+
+        window.bulkFavorite = function() {
+            console.log('Bulk favoriting leads:', Array.from(selectedLeads));
+            // Simulate bulk favoriting
+        };
+
+        window.handleLeadClick = function(leadId) {
+            if (!isSelectionMode) {
+                showLeadDetails(leadId);
+            }
+        };
+
+        window.openLeadChat = function(leadId) {
+            const chatModal = document.getElementById('chatModal');
+            chatModal.style.transform = 'translateX(0)';
+            console.log('Opening chat for lead:', leadId);
+        };
+
+        window.closeChatModal = function() {
+            const chatModal = document.getElementById('chatModal');
+            chatModal.style.transform = 'translateX(100%)';
+        };
+
+        window.sendEmail = function(leadId) {
+            console.log('Sending email to lead:', leadId);
+            // Simulate email sending
+            alert('Email enviado com sucesso!');
+        };
+
+        window.showLeadDetails = function(leadId) {
+            console.log('Showing details for lead:', leadId);
+            // Simulate showing lead details
+        };
+
+        window.toggleFavorite = function(leadId) {
+            console.log('Toggling favorite for lead:', leadId);
+            // Simulate favorite toggle
+        };
+
+        window.showUpgradeModal = function() {
+            const modal = document.getElementById('upgradeModal');
+            modal.classList.remove('hidden');
+        };
+
+        window.closeUpgradeModal = function() {
+            const modal = document.getElementById('upgradeModal');
+            modal.classList.add('hidden');
+        };
+
+        window.unlockWithCredit = function() {
+            console.log('Unlocking with credit');
+            closeUpgradeModal();
+            alert('Lead desbloqueado com sucesso!');
+        };
+
+        window.upgradeToPromo = function() {
+            console.log('Upgrading to promo plan');
+            // Redirect to payment
+        };
+
+        // Navigation functions
+        window.navigateToFeed = function() {
+            console.log('Navigate to Feed');
+        };
+
+        window.navigateToChat = function() {
+            console.log('Navigate to Chat');
+        };
+
+        window.navigateToFavorites = function() {
+            console.log('Navigate to Favorites');
+        };
+
+        window.navigateToAnalytics = function() {
+            console.log('Navigate to Analytics');
+        };
+
+        window.navigateToProfile = function() {
+            console.log('Navigate to Profile');
+        };
+
+        // Infinite scroll simulation
+        const feedElement = document.getElementById('leadsFeed');
+        feedElement.addEventListener('scroll', () => {
+            if (feedElement.scrollTop + feedElement.clientHeight >= feedElement.scrollHeight - 100) {
+                console.log('Loading more leads...');
+                // Simulate loading more leads
+            }
+        });
+
+        // Add smooth scrolling behavior
+        document.documentElement.style.scrollBehavior = 'smooth';
+
+    })();
+    </script>
+
+    <style>
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .selection-overlay {
+            transition: all 0.3s ease;
+        }
+        
+        input[type=&quot;checkbox&quot;]:checked + .selection-overlay {
+            background-color: #25D366 !important;
+            color: white;
+        }
+        
+        input[type=&quot;checkbox&quot;]:checked + .selection-overlay::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</body>
+</html>" src="https://6cd9395e-0579-4ea6-a9e7-6b2246f370a5-00-254tz2b9460km.janeway.replit.dev:5904/"></iframe></div>
